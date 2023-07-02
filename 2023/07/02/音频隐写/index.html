@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>音频隐写 | Hexo</title>
+
+  <!-- keywords -->
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="工具：Audacity、Adobe Audition(简称au)、SilentEye、DeepSound、SSTV、mp3stego。 ​    其实和图片一样，数字音频也可以用于信息隐写，音视频隐写会存在比较明显的特征：    · 音频载体信号存在冗余，为隐蔽信息提供支持；    · 人类听觉系统频谱范围是20Hz18kHz，但对2kHz4kH信息最为敏感；    · 人类听觉系统只对相对相位敏">
+<meta property="og:type" content="article">
+<meta property="og:title" content="音频隐写">
+<meta property="og:url" content="http://example.com/2023/07/02/%E9%9F%B3%E9%A2%91%E9%9A%90%E5%86%99/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="工具：Audacity、Adobe Audition(简称au)、SilentEye、DeepSound、SSTV、mp3stego。 ​    其实和图片一样，数字音频也可以用于信息隐写，音视频隐写会存在比较明显的特征：    · 音频载体信号存在冗余，为隐蔽信息提供支持；    · 人类听觉系统频谱范围是20Hz18kHz，但对2kHz4kH信息最为敏感；    · 人类听觉系统只对相对相位敏">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/2023/07/02/%E9%9F%B3%E9%A2%91%E9%9A%90%E5%86%99/640.png">
+<meta property="og:image" content="http://example.com/2023/07/02/%E9%9F%B3%E9%A2%91%E9%9A%90%E5%86%99/640-168826393467738.png">
+<meta property="og:image" content="http://example.com/2023/07/02/%E9%9F%B3%E9%A2%91%E9%9A%90%E5%86%99/640-168826393467739.png">
+<meta property="og:image" content="http://example.com/2023/07/02/%E9%9F%B3%E9%A2%91%E9%9A%90%E5%86%99/640-168826393467740.png">
+<meta property="og:image" content="http://example.com/2023/07/02/%E9%9F%B3%E9%A2%91%E9%9A%90%E5%86%99/640-168826393467741.png">
+<meta property="og:image" content="http://example.com/2023/07/02/%E9%9F%B3%E9%A2%91%E9%9A%90%E5%86%99/640-168826393467742.png">
+<meta property="og:image" content="http://example.com/2023/07/02/%E9%9F%B3%E9%A2%91%E9%9A%90%E5%86%99/640-168826393467843.png">
+<meta property="og:image" content="http://example.com/2023/07/02/%E9%9F%B3%E9%A2%91%E9%9A%90%E5%86%99/640-168826393467844.png">
+<meta property="og:image" content="http://example.com/2023/07/02/%E9%9F%B3%E9%A2%91%E9%9A%90%E5%86%99/640-168826393467843.png">
+<meta property="og:image" content="http://example.com/2023/07/02/%E9%9F%B3%E9%A2%91%E9%9A%90%E5%86%99/640-168826393467844.png">
+<meta property="og:image" content="http://example.com/2023/07/02/%E9%9F%B3%E9%A2%91%E9%9A%90%E5%86%99/640-168826393467845.png">
+<meta property="og:image" content="http://example.com/2023/07/02/%E9%9F%B3%E9%A2%91%E9%9A%90%E5%86%99/640-168826393467846.png">
+<meta property="og:image" content="http://example.com/2023/07/02/%E9%9F%B3%E9%A2%91%E9%9A%90%E5%86%99/640-168826393467847.png">
+<meta property="og:image" content="http://example.com/2023/07/02/%E9%9F%B3%E9%A2%91%E9%9A%90%E5%86%99/640-168826393467848.png">
+<meta property="og:image" content="http://example.com/2023/07/02/%E9%9F%B3%E9%A2%91%E9%9A%90%E5%86%99/640-168826393467849.png">
+<meta property="og:image" content="http://example.com/2023/07/02/%E9%9F%B3%E9%A2%91%E9%9A%90%E5%86%99/640-168826393467850.png">
+<meta property="og:image" content="http://example.com/2023/07/02/%E9%9F%B3%E9%A2%91%E9%9A%90%E5%86%99/640-168826393467851.png">
+<meta property="article:published_time" content="2023-07-02T02:11:58.000Z">
+<meta property="article:modified_time" content="2023-07-02T02:12:18.297Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2023/07/02/%E9%9F%B3%E9%A2%91%E9%9A%90%E5%86%99/640.png">
+  
+    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="http://7xkj1z.com1.z0.glb.clouddn.com/head.jpg">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+
+  
+<script src="//cdn.bootcss.com/require.js/2.3.2/require.min.js"></script>
+
+  
+<script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+  <div id="container">
+    <div id="particles-js"></div>
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="touxiang/t.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/"></a></h1>
+		</hgroup>
+
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://github.com/smackgg/hexo-theme-smackdown">smackdown</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide"></h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="touxiang/t.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author"></h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-音频隐写" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2023/07/02/%E9%9F%B3%E9%A2%91%E9%9A%90%E5%86%99/" class="article-date">
+  	<time datetime="2023-07-02T02:11:58.000Z" itemprop="datePublished">2023-07-02</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      音频隐写
+      
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+        
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>工具：Audacity、Adobe Audition(简称au)、SilentEye、DeepSound、SSTV、mp3stego。</p>
+<p>​    其实和图片一样，数字音频也可以用于信息隐写，音视频隐写会存在比较明显的特征：</p>
+<p>   · 音频载体信号存在冗余，为隐蔽信息提供支持；</p>
+<p>   · 人类听觉系统频谱范围是20Hz18kHz，但对2kHz4kH信息最为敏感；</p>
+<p>   · 人类听觉系统只对相对相位敏感，而无法感知绝对相位。</p>
+<p>​    这里参考一位师傅写的文章</p>
+<blockquote>
+<p>  C语言解析WAV音频文件</p>
+<p>  <a target="_blank" rel="noopener" href="https://www.cnblogs.com/guojun-junguo/p/10129548.html">https://www.cnblogs.com/guojun-junguo/p/10129548.html</a></p>
+</blockquote>
+<p>常见题型</p>
+<p>1.Audacity</p>
+<p>作为最常用的音频查看软件，当试听题目音频没有明显杂音或者信息时，一般会选择用Audacity打开</p>
+<p><img src="/2023/07/02/%E9%9F%B3%E9%A2%91%E9%9A%90%E5%86%99/640.png" alt="图片"></p>
+<p>  并可以选择查看波形、频谱图</p>
+<p><img src="/2023/07/02/%E9%9F%B3%E9%A2%91%E9%9A%90%E5%86%99/640-168826393467738.png" alt="图片"></p>
+<p>​    可能会获得morse电码或者二进制的信息,当然部分题目信息量过大，会用到脚本来进行提取</p>
+<p><img src="/2023/07/02/%E9%9F%B3%E9%A2%91%E9%9A%90%E5%86%99/640-168826393467739.png" alt="图片"></p>
+<p>​    此外，波形图的上下峰也可能会暗含信息</p>
+<p><img src="/2023/07/02/%E9%9F%B3%E9%A2%91%E9%9A%90%E5%86%99/640-168826393467740.png" alt="图片"></p>
+<p>​    出题方式是千变万化，分离左右声道来获得信息，diff反相音频获得信息，通过倒序，反相，慢速，降噪等步骤也视情况尝试（例如：经典的单词模糊听写，需要倒序后慢速听；充斥杂音的音频需要一定程度的降噪才能获得信息；ASCII编码的数字需要注意是否越过127）</p>
+<p>2.SSTV</p>
+<p>把图片隐藏到音频信息中的隐写，手机上可以装Robot36（app），PC可以用MMSSTV。</p>
+<p><img src="/2023/07/02/%E9%9F%B3%E9%A2%91%E9%9A%90%E5%86%99/640-168826393467741.png" alt="图片"></p>
+<p><img src="/2023/07/02/%E9%9F%B3%E9%A2%91%E9%9A%90%E5%86%99/640-168826393467742.png" alt="图片"></p>
+<p>3.Deepsound</p>
+<p>​    作为带有密码的音频隐写</p>
+<p><img src="/2023/07/02/%E9%9F%B3%E9%A2%91%E9%9A%90%E5%86%99/640-168826393467843.png" alt="图片"></p>
+<p>​    Deepsound的密码可通过john爆破</p>
+<p><img src="/2023/07/02/%E9%9F%B3%E9%A2%91%E9%9A%90%E5%86%99/640-168826393467844.png" alt="图片"></p>
+<p>4.Deepsound</p>
+<p>​    作为带有密码的音频隐写</p>
+<p><img src="/2023/07/02/%E9%9F%B3%E9%A2%91%E9%9A%90%E5%86%99/640-168826393467843.png" alt="图片"></p>
+<p>​    Deepsound的密码可通过john爆破</p>
+<p><img src="/2023/07/02/%E9%9F%B3%E9%A2%91%E9%9A%90%E5%86%99/640-168826393467844.png" alt="图片"></p>
+<p>5.MP3stego</p>
+<p>​    MP3格式文件：</p>
+<p>  cmd打开，将 Decode.exe 拖到命令行里，将要解密的文件放在文件夹中</p>
+<p>  # 隐藏信息</p>
+<p>  # —E 读取隐藏信息文件的内容，-P 设置密码</p>
+<blockquote>
+<p>encode.exe -E hidden.txt -P pass CTF.wav svega_stego.mp3</p>
+</blockquote>
+<p>  # 解密信息</p>
+<blockquote>
+<p>decode.exe -X svega_stego.mp3 -P pass</p>
+</blockquote>
+<p>拨号隐写（DTMF）</p>
+<p><img src="/2023/07/02/%E9%9F%B3%E9%A2%91%E9%9A%90%E5%86%99/640-168826393467845.png" alt="图片"></p>
+<blockquote>
+<p>  推荐一个GitHub上的脚本工具</p>
+<p>  <a target="_blank" rel="noopener" href="https://gitcode.net/mirrors/ribt/dtmf-decoder?utm_source=csdn_github_accelerator">https://gitcode.net/mirrors/ribt/dtmf-decoder?utm_source=csdn_github_accelerator</a></p>
+</blockquote>
+<p>6.MIDI隐写</p>
+<p>​     MIDI (mid)， 文件头：4D546864</p>
+<p><img src="/2023/07/02/%E9%9F%B3%E9%A2%91%E9%9A%90%E5%86%99/640-168826393467846.png" alt="图片"></p>
+<p>​    乍看没有发现任何信息，但稍微研究一下midi的文件结构，将音乐通道由2改为3</p>
+<p><img src="/2023/07/02/%E9%9F%B3%E9%A2%91%E9%9A%90%E5%86%99/640-168826393467847.png" alt="图片"></p>
+<p>​    再重新打开文件，即可发现隐藏通道下的二维码</p>
+<p><img src="/2023/07/02/%E9%9F%B3%E9%A2%91%E9%9A%90%E5%86%99/640-168826393467848.png" alt="图片"></p>
+<p>7.信号分析</p>
+<p>​    </p>
+<p>​    包括无线电信号分析，GPS信号分析，一般用Adobe Audition或者Audacity分析；PT2242信号：前面4bit表示同步码，中间的20bit表示地址码，后面的4bit表示功能码，最后一位是停止码。</p>
+<p>8.HackRF区别</p>
+<p><img src="/2023/07/02/%E9%9F%B3%E9%A2%91%E9%9A%90%E5%86%99/640-168826393467849.png" alt="图片"></p>
+<p>9.原始数据</p>
+<p>​    当见到音频的后缀为一些奇怪的组合时，比如扩展名为s8，要考虑是否为原始数据，所以在导入时选择导入原始数据</p>
+<p><img src="/2023/07/02/%E9%9F%B3%E9%A2%91%E9%9A%90%E5%86%99/640-168826393467850.png" alt="图片"></p>
+<p><img src="/2023/07/02/%E9%9F%B3%E9%A2%91%E9%9A%90%E5%86%99/640-168826393467851.png" alt="图片"></p>
+<p>​    默认采样率、尾端和编码获取不到信息时，也要根据需要调试（频谱图可以容易的识别出信号的中心频率）</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2023/07/02/sqlmap%E6%8C%87%E4%BB%A4/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">&lt;</strong>
+      <div class="article-nav-title">
+        
+          sqlmap指令
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2023/07/02/%E6%96%87%E4%BB%B6%E8%A7%A3%E6%9E%90%E6%BC%8F%E6%B4%9E/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">文件解析漏洞</div>
+      <strong class="article-nav-caption">&gt;</strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="ds-share share" data-thread-key="音频隐写" data-title="音频隐写" data-url="http://example.com/2023/07/02/%E9%9F%B3%E9%A2%91%E9%9A%90%E5%86%99/"  data-images="touxiang/t.jpg" data-content="音频隐写">
+    <div class="ds-share-inline">
+      <ul  class="ds-share-icons-16">
+      	<li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+        <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+        <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+        <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+        <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+      </ul>
+      <div class="ds-share-icons-more">
+      </div>
+    </div>
+ </div>
+ 
+
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+      <div class="footer-left">
+        &copy; 2023 John Doe
+      </div>
+        <div class="footer-right">
+          <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/smackgg/hexo-theme-smackdown" target="_blank">Smackdown</a>
+        </div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+
+<script src="/js/main.js"></script>
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js"></script>
+
+
+  </div>
+</body>
+</html>

