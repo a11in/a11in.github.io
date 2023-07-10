@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Linux的/proc目录 | Hexo</title>
+
+  <!-- keywords -->
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="linux 的&#x2F;proc目录Linux 内核提供了一种通过 proc 文件系统，在运行时访问内核内部数据结构、改变内核设置的机制。proc 文件系统是一个伪文件系统，它只存在内存当中，而不占用外存空间。它以文件系统的方式为访问系统内核数据的操作提供接口。 用户和应用程序可以通过 proc 得到系统的信息，并可以改变内核的某些参数。由于系统的信息，如进程，是动态改变的，所以用户或应用程序读">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux的&#x2F;proc目录">
+<meta property="og:url" content="http://example.com/2023/07/10/Linux%E7%9A%84-proc%E7%9B%AE%E5%BD%95/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="linux 的&#x2F;proc目录Linux 内核提供了一种通过 proc 文件系统，在运行时访问内核内部数据结构、改变内核设置的机制。proc 文件系统是一个伪文件系统，它只存在内存当中，而不占用外存空间。它以文件系统的方式为访问系统内核数据的操作提供接口。 用户和应用程序可以通过 proc 得到系统的信息，并可以改变内核的某些参数。由于系统的信息，如进程，是动态改变的，所以用户或应用程序读">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/2023/07/10/Linux%E7%9A%84-proc%E7%9B%AE%E5%BD%95/1631005255380-d579c838-63cd-44d8-820b-061a485e67ab.png">
+<meta property="og:image" content="http://example.com/2023/07/10/Linux%E7%9A%84-proc%E7%9B%AE%E5%BD%95/735598c617664fada2cade1077318e39.png">
+<meta property="article:published_time" content="2023-07-10T14:04:55.000Z">
+<meta property="article:modified_time" content="2023-07-10T14:05:24.143Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2023/07/10/Linux%E7%9A%84-proc%E7%9B%AE%E5%BD%95/1631005255380-d579c838-63cd-44d8-820b-061a485e67ab.png">
+  
+    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="http://7xkj1z.com1.z0.glb.clouddn.com/head.jpg">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+
+  
+<script src="//cdn.bootcss.com/require.js/2.3.2/require.min.js"></script>
+
+  
+<script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+  <div id="container">
+    <div id="particles-js"></div>
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="https://img.zcool.cn/community/0189c159004572a801214550774134.png@1280w_1l_2o_100sh.png" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/"></a></h1>
+		</hgroup>
+
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://github.com/smackgg/hexo-theme-smackdown">smackdown</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide"></h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="https://img.zcool.cn/community/0189c159004572a801214550774134.png@1280w_1l_2o_100sh.png" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author"></h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-Linux的-proc目录" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2023/07/10/Linux%E7%9A%84-proc%E7%9B%AE%E5%BD%95/" class="article-date">
+  	<time datetime="2023-07-10T14:04:55.000Z" itemprop="datePublished">2023-07-10</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Linux的/proc目录
+      
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+        
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="linux-的-x2F-proc目录"><a href="#linux-的-x2F-proc目录" class="headerlink" title="linux 的&#x2F;proc目录"></a>linux 的&#x2F;proc目录</h1><p>Linux 内核提供了一种通过 proc 文件系统，在运行时访问内核内部数据结构、改变内核设置的机制。proc 文件系统是一个伪文件系统，它只存在内存当中，而不占用外存空间。它以文件系统的方式为访问系统内核数据的操作提供接口。</p>
+<p>用户和应用程序可以通过 proc 得到系统的信息，并可以改变内核的某些参数。由于系统的信息，如进程，是动态改变的，所以用户或应用程序读取 proc 文件时，proc 文件系统是动态从系统内核读出所需信息并提交的。</p>
+<p>下面列出的这些文件或子文件夹，并不是都是在你的系统中存在，这取决于你的内核配置和装载的模块。另外，在 proc 下还有三个很重要的目录：net，scsi 和 sys。 sys 目录是可写的，可以通过它来访问或修改内核的参数，而 net 和 scsi 则依赖于内核配置。例如，如果系统不支持 scsi，则 scsi 目录不存在。</p>
+<p>除了以上介绍的这些，还有的是一些以数字命名的目录，它们是进程目录。系统中当前运行的每一个进程都有对应的一个目录在 proc 下，以进程的 PID 号为目录名，它们是读取进程信息的接口。而 self 目录则是读取进程本身的信息接口，是一个 link。</p>
+<p>原文链接[简析Linux中 &#x2F;proc&#x2F;<a target="_blank" rel="noopener" href="https://www.linuxprobe.com/linux-proc-pid.html">pid] 目录的各文件 | 《Linux就该这么学》 (linuxprobe.com)</a></p>
+<p>有大佬通俗总结就是：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">为了满足linux一切皆文件的特性，所以进程也需要变成&quot;文件&quot;，而/proc目录就是一个伪文件系统，他里面对应了所有进程的&quot;虚拟文件&quot;，这是linux内核提供的查询并控制进程的一个文件目录，达到像修改文件那样，修改进程的相关属性</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="一级子目录PID："><a href="#一级子目录PID：" class="headerlink" title="一级子目录PID："></a>一级子目录PID：</h4><p> 在&#x2F;proc目录下会有一些以数字为名字的文件夹，这些文件夹就是进程运行时对应的进程号，所以对对应PID文件夹里的操作，就是对进程相关信息的操作</p>
+<p>这里要提的是一个特殊的alias（或者说link）,就是self文件夹，他是当前运行的程序所对应的进程号的一个链接，这是为了方便快速从众多进程号中找到当前正在运行的文件</p>
+<h4 id="一级子目录下文件cmdline"><a href="#一级子目录下文件cmdline" class="headerlink" title="一级子目录下文件cmdline"></a>一级子目录下文件cmdline</h4><p>在每个&#x2F;proc&#x2F;PID&#x2F;目录下都会有一个cmdline文件，这个文件记录了当前这个进程所执行的完整命令信息 所以当我们要找一个进程对应的PID的时候，可以用</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nl /proc/*/cmdline 来遍历所有进程的命令对应的PID</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="二级子目录fd"><a href="#二级子目录fd" class="headerlink" title="二级子目录fd"></a>二级子目录fd</h4><p> 在&#x2F;proc&#x2F;PID&#x2F;目录下有一个fd文件夹，顾名思义就是file description的意思，这个文件夹就存放着这个进程所拥有的文件描述符(默认有0,1,2)，下面有非默认文件描述符的作用</p>
+<h3 id="其他：Linux非默认文件描述符的作用"><a href="#其他：Linux非默认文件描述符的作用" class="headerlink" title="其他：Linux非默认文件描述符的作用"></a>其他：Linux非默认文件描述符的作用</h3><p>现在假设我们运行了一个py,或者c或者某种语言的程序，在这个程序里面我们打开了一个文件，但是我们没有关闭这个文件，就把它删除了，这样的话不会完全删除，首先这个语言的程序会有一个PID,其次在这个进程里我们打开了文件，所以这个PID的文件描述符里会有那个文件的信息存在，虽然我们在程序里把文件删除了，但是这个被删除文件的fd还在运行的进程里，只要进程没有关闭，我们就可以在&#x2F;proc&#x2F;PID&#x2F;fd&#x2F;目录下找到这个文件的fd来读取它的内容 </p>
+<p>至于说要怎么找到这个对应的fd，有两种方法</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;1&gt;有shell的情况下，cat /proc/PID/fd/* 遍历查找</span><br><span class="line">&lt;2&gt;没有shell的情况下，可以用bp抓包用intruder模块遍历，也可以自己写个脚本多次发包</span><br></pre></td></tr></table></figure>
+
+
+
+<p>首先有了刚刚总结的linux的基础知识，我们的目的是要找到打开flag文件的进程PID，并且在里面找到flag对应的文件描述符，我总结了一个比较系统的攻击流程</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;1&gt;首先遍历 cat /proc/self/fd/* 看看当前进程的所有文件描述符</span><br><span class="line">&lt;2&gt;如果第一步没找到，</span><br><span class="line">(1)那就nl /proc/*/cmdline(注意这里用nl，而不用cat，因为用cat所有进程的命令都粘在一起了，用nl一行就是一个进程的命令)</span><br><span class="line">(2)从所有进程命令里找到可能是flag所在的命令，然后用cd /proc ls一下看那个命令对应的PID是多少</span><br><span class="line">(3)找到PID之后, cat /poc/PID/fd/* 就可以遍历查看那个命令的所有fd</span><br><span class="line">&lt;3&gt;上面的&lt;2&gt;方法是通解，一定能找到flag的fd,但是在进程很少的时候（因为题目一般是容器靶机，所以进程不多，只有基本组件）我们可以不用找进程PID，直接cat /proc/*/fd/* 遍历所有进程的所有fd</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="setTimeout-int溢出"><a href="#setTimeout-int溢出" class="headerlink" title="setTimeout-int溢出"></a>setTimeout-int溢出</h3><p><strong>setTimeout</strong>是使用Int32来存储延时参数<strong>值</strong>的，也就是说<strong>最大</strong>的延时<strong>值</strong>是2^31-1。 一旦超过了<strong>最大值</strong>，其效果就跟延时<strong>值</strong>为0的情况一样。</p>
+<p><img src="/2023/07/10/Linux%E7%9A%84-proc%E7%9B%AE%E5%BD%95/1631005255380-d579c838-63cd-44d8-820b-061a485e67ab.png" alt="img"></p>
+<p><img src="/2023/07/10/Linux%E7%9A%84-proc%E7%9B%AE%E5%BD%95/735598c617664fada2cade1077318e39.png" alt="img"></p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2099/07/05/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">&lt;</strong>
+      <div class="article-nav-title">
+        
+          欢迎来到allin的博客
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2023/07/02/sqlmap%E6%8C%87%E4%BB%A4/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">sqlmap指令</div>
+      <strong class="article-nav-caption">&gt;</strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="ds-share share" data-thread-key="Linux的-proc目录" data-title="Linux的/proc目录" data-url="http://example.com/2023/07/10/Linux%E7%9A%84-proc%E7%9B%AE%E5%BD%95/"  data-images="https://img.zcool.cn/community/0189c159004572a801214550774134.png@1280w_1l_2o_100sh.png" data-content="Linux的/proc目录">
+    <div class="ds-share-inline">
+      <ul  class="ds-share-icons-16">
+      	<li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+        <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+        <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+        <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+        <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+      </ul>
+      <div class="ds-share-icons-more">
+      </div>
+    </div>
+ </div>
+ 
+
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+      <div class="footer-left">
+        &copy; 2023 John Doe
+      </div>
+        <div class="footer-right">
+          <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/smackgg/hexo-theme-smackdown" target="_blank">Smackdown</a>
+        </div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+
+<script src="/js/main.js"></script>
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js"></script>
+
+
+  </div>
+</body>
+</html>
